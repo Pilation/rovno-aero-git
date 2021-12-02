@@ -395,7 +395,6 @@ span {
   font-weight: 400;
   line-height: 100%;
   color: #fff;
-  border-bottom: 1px solid #eee;
 }
 
 .header__logo {
@@ -428,7 +427,7 @@ span {
 .header__menu {
   margin: 0 auto;
   height: 60px;
-  max-width: 1248px;
+  border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -439,7 +438,6 @@ span {
 
 .header__menu.fixed {
   background-color: white;
-  max-width: 100%;
   margin: 0 auto;
   width: 100%;
   position: fixed;
@@ -453,6 +451,10 @@ span {
 .header__menu.fixed .header__link {
   color: #222222;
   opacity: 0.7;
+}
+
+.header__menu.fixed .header-dropdown__box {
+  top: 60px;
 }
 
 .header__list {
@@ -490,7 +492,8 @@ span {
           align-items: flex-start;
 }
 
-.header-dropdown__box {
+.header-dropdown {
+  z-index: 2;
   position: absolute;
   left: 0;
   top: 140px;
@@ -503,19 +506,34 @@ span {
   visibility: hidden;
 }
 
+.header-dropdown__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 14px;
+}
+
 .header-dropdown__list {
-  max-width: 1248px;
-  margin: 0 auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (calc(100% / 16 * 4))[3];
-      grid-template-columns: repeat(3, calc(100% / 16 * 4));
-  row-gap: 16px;
-  -webkit-column-gap: 14px;
-          column-gap: 14px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 25%;
+  min-width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 16px;
 }
 
 .header-dropdown__link {
@@ -525,11 +543,11 @@ span {
 }
 
 .header-dropdown__link_inactive {
-  color: red;
+  color: #777;
 }
 
 /* Show the dropdown menu on hover */
-.header__item:hover .header-dropdown__box {
+.header__item_dropdown:hover .header-dropdown {
   visibility: visible;
 }
 
