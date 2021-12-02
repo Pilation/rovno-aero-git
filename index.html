@@ -28,21 +28,23 @@
     <div class="wrapper">
         <!-- header -->
         <header class="header">
-            <div class="header__upper-box">
-                <a href="" class="header__logo">
-                    <img src="img/logo_full.svg" alt="img">
-                </a>
-                <span class="header__border"></span>
-                <div class="header__time time-date">
-                    <span class="time-date__description">Зараз у Рівному:</span>
-                    <span class="time">15:25</span>
-                    <span class="weather">4&deg;</span>
+            <div class="container">
+                <div class="header__upper-box">
+                    <a href="" class="header__logo">
+                        <img src="img/logo_full.svg" alt="img">
+                    </a>
+                    <span class="header__border"></span>
+                    <div class="header__time time-date">
+                        <span class="time-date__description">Зараз у Рівному:</span>
+                        <span class="time">15:25</span>
+                        <span class="weather">4&deg;</span>
+                    </div>
+                    <select name="" id="" class="header__language">
+                        <option value="UA">УКР</option>
+                        <option value="RU">РУС</option>
+                        <option value="ENG">ENG</option>
+                    </select>
                 </div>
-                <select name="" id="" class="header__language">
-                    <option value="UA">УКР</option>
-                    <option value="RU">РУС</option>
-                    <option value="ENG">ENG</option>
-                </select>
             </div>
             <nav class="header__menu">
                 <div class="container">
@@ -399,9 +401,7 @@
         <!-- header-slider -->
         <div class="header-slider">
             <div class="header-slider__item">
-                <div class="header-slider__image">
-                    <img src="img/header-slider/header-slider1.png" alt="img">
-                </div>
+                <img src="img/header-slider/header-slider1.png" alt="img">
                 <div class="header-slider__description">
                     <span class="header-slider__tag">
                         Рейси
@@ -423,9 +423,7 @@
                 </div>
             </div>
             <div class="header-slider__item">
-                <div class="header-slider__image">
-                    <img src="img/header-slider/header-slider2.jpg" alt="img">
-                </div>
+                <img src="img/header-slider/header-slider2.jpg" alt="img">
                 <div class="header-slider__description">
                     <span class="header-slider__tag">
                         Рейси
@@ -444,9 +442,7 @@
                 </div>
             </div>
             <div class="header-slider__item">
-                <div class="header-slider__image">
-                    <img src="img/header-slider/header-slider3.png" alt="img">
-                </div>
+                <img src="img/header-slider/header-slider3.png" alt="img">
                 <div class="header-slider__description">
                     <!-- <span class="header-slider__tag">
                         </span> -->
@@ -465,9 +461,7 @@
                 </div>
             </div>
             <div class="header-slider__item">
-                <div class="header-slider__image">
-                    <img src="img/header-slider/header-slider4.png" alt="img">
-                </div>
+                <img src="img/header-slider/header-slider4.png" alt="img">
                 <div class="header-slider__description">
                     <!-- <span class="header-slider__tag">
                         </span> -->
@@ -485,9 +479,7 @@
                 </div>
             </div>
             <div class="header-slider__item">
-                <div class="header-slider__image">
-                    <img src="img/header-slider/header-slider5.jpg" alt="img">
-                </div>
+                <img src="img/header-slider/header-slider5.jpg" alt="img">
                 <div class="header-slider__description">
                     <span class="header-slider__tag">
                         16.07.2021
@@ -506,9 +498,7 @@
                 </div>
             </div>
             <div class="header-slider__item">
-                <div class="header-slider__image">
-                    <img src="img/header-slider/header-slider6.png" alt="img">
-                </div>
+                <img src="img/header-slider/header-slider6.png" alt="img">
                 <div class="header-slider__description">
                     <span class="header-slider__tag">
                         Рейси
@@ -527,9 +517,7 @@
                 </div>
             </div>
             <div class="header-slider__item">
-                <div class="header-slider__image">
-                    <img src="img/header-slider/header-slider7.jpg" alt="img">
-                </div>
+                <img src="img/header-slider/header-slider7.jpg" alt="img">
                 <div class="header-slider__description">
                     <span class="header-slider__tag">
                         Напрямки
@@ -548,9 +536,7 @@
                 </div>
             </div>
             <div class="header-slider__item">
-                <div class="header-slider__image">
-                    <img src="img/header-slider/header-slider8.png" alt="img">
-                </div>
+                <img src="img/header-slider/header-slider8.png" alt="img">
                 <div class="header-slider__description">
                     <span class="header-slider__tag">
                         COVID-19
@@ -568,9 +554,7 @@
                 </div>
             </div>
             <div class="header-slider__item">
-                <div class="header-slider__image">
-                    <img src="img/header-slider/header-slider9.jpg" alt="img">
-                </div>
+                <img src="img/header-slider/header-slider9.jpg" alt="img">
                 <div class="header-slider__description">
                     <span class="header-slider__tag">
                         COVID-19
@@ -588,9 +572,7 @@
                 </div>
             </div>
             <div class="header-slider__item">
-                <div class="header-slider__image">
-                    <img src="img/header-slider/header-slider10.jpg" alt="img">
-                </div>
+                <img src="img/header-slider/header-slider10.jpg" alt="img">
                 <div class="header-slider__description">
                     <span class="header-slider__tag">
                         COVID-19
@@ -665,8 +647,11 @@
                             <label class="subscription-form__title" for="email">
                                 Підпишіться на розсилку і будьте в курсі новин!
                             </label>
-                            <input class="subscription-form__input" type="email" id="email" name="email"
-                                placeholder="Ваш Email" aria-required="true">
+                            <div class="subscription-form__input-box">
+                                <input class="subscription-form__input" type="email" id="email" name="email"
+                                    placeholder="Ваш Email" aria-required="true">
+                                <button type="submit" class="subscription-form__button"></button>
+                            </div>
                         </form>
                         <a href="" class="news__item">
                             <h4 class="news__title">
