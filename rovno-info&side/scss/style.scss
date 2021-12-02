@@ -1,52 +1,13 @@
 @import "_null.scss";
-@import "_fonts.scss";
-@import "_slick-theme.scss";
-@import "_slick.scss";
-@import "_sliders.scss";
 
-// @keyframes shake {
-//     0% {
-//         transform: translate(1px, 1px) rotate(0deg);
-//     }
-//     10% {
-//         transform: translate(-1px, -2px) rotate(-1deg);
-//     }
-//     20% {
-//         transform: translate(-3px, 0px) rotate(1deg);
-//     }
-//     30% {
-//         transform: translate(3px, 2px) rotate(0deg);
-//     }
-//     40% {
-//         transform: translate(1px, -1px) rotate(1deg);
-//     }
-//     50% {
-//         transform: translate(-1px, 2px) rotate(-1deg);
-//     }
-//     60% {
-//         transform: translate(-3px, 1px) rotate(0deg);
-//     }
-//     70% {
-//         transform: translate(3px, 1px) rotate(-1deg);
-//     }
-//     80% {
-//         transform: translate(-1px, -1px) rotate(1deg);
-//     }
-//     90% {
-//         transform: translate(1px, 2px) rotate(0deg);
-//     }
-//     100% {
-//         transform: translate(1px, -2px) rotate(-1deg);
-//     }
-// }
+// $f190: calc(80px + 110 * ((100vw - 420px) / (1440 - 420)));
+// $f100: calc(60px + 40 * ((100vw - 420px) / (1440 - 420)));
 
-$f190: calc(80px + 110 * ((100vw - 420px) / (1440 - 420)));
-$f100: calc(60px + 40 * ((100vw - 420px) / (1440 - 420)));
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
 }
-body {
-}
+
 p,
 h1,
 h2,
@@ -61,10 +22,14 @@ span {
 
 $font: "Roboto", sans-serif;
 
-$f12: 0.75rem;
 $f13: 0.8125rem;
-$f14: 0.875rem;
 $f15: 0.975rem;
+$f28: 1.75rem;
+$f17: 1.0625rem;
+
+$f14: 0.875rem;
+
+$f12: 0.75rem;
 $f16: 1rem;
 $f18: 1.125rem;
 $f24: 1.5rem;
@@ -103,13 +68,6 @@ $mw: 1248px;
 }
 
 .wrapper {
-    background-image: url(../img/background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #f1f4f6;
-    // background-color: rgb(238, 242, 244);
-    // background-color: red;
 }
 
 .grey-button {
@@ -288,112 +246,154 @@ $mw: 1248px;
     visibility: visible;
 }
 
-//todo Header-slider
-
-.header-slider {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    z-index: 0;
+.breadcrumbs {
+    font-family: $font;
+    font-size: $f13;
+    line-height: $f15;
+    color: #777;
+    margin-top: 140px;
+    padding: 40px 0;
     &__list {
-    }
-
-    &__item {
-        position: relative;
-    }
-
-    img {
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-    }
-
-    &__navigation {
-        font-size: 0;
-        position: absolute;
-        z-index: 1;
-        top: 50%;
-        left: 50%;
-        transform: translateY(133px);
-        z-index: 100;
-        width: fit-content;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 24px;
-        border-radius: 2px;
-    }
-    &__dots {
-        height: 32px;
-        display: flex;
-        align-items: center;
-        padding: 8px;
-        background-color: #22222266;
-        border-radius: 2px;
-    }
-    &__arrows {
-        border-radius: 2px;
-        height: 32px;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        align-items: center;
-        gap: 8px;
+        gap: 25px;
+        a {
+            color: #222222;
+        }
     }
+}
 
-    &__description {
-        overflow: hidden;
-        height: 246px;
-        position: absolute;
-        z-index: 1;
-        font-family: $font;
-        border-radius: 2px;
-        z-index: 100;
-        top: -200px;
-        left: 50%;
-        top: 50%;
-        transform: translateY(-123px);
-        width: 29%;
-    }
-
-    &__tag {
-        font-size: $f13;
-        line-height: $f16;
-        padding: 4px 12px;
-        background-color: #ffffff4d;
-        color: #fff;
-        margin-bottom: 25px;
-    }
-
-    &__link {
-        color: #fff;
-        font-size: $f26;
-        line-height: 2.5rem;
+.info-aside {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+}
+.side-menu {
+    flex: 1 1 15%;
+    align-self: flex-start;
+    min-width: 250px;
+    width: 250px;
+    font-family: $font;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: sticky;
+    top: 80px;
+    &__box {
+        background-color: #dbdee640;
+        border-radius: 4px;
+        // display: flex;
+        // flex-direction: column;
     }
 
     &__title {
-    }
-
-    &__big {
+        width: 100%;
+        padding: 24px;
+        font-size: $f16;
         font-weight: bold;
+        color: #222;
+        border-bottom: 1px solid #e6e6e6;
     }
 
-    &__small {
-        // font-size: $f26;
+    &__ancors {
+        padding: 24px;
     }
 
-    &__underlined {
-        // text-transform: underline;
-        text-decoration: underline;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
     }
+
+    &__ancor {
+        color: #777;
+        font-size: $f15;
+        line-height: $f16;
+    }
+
+    &__links {
+    }
+
+    &__link {
+    }
+
+    &__small-title {
+    }
+
+    &__small-description {
+    }
+}
+.main-info {
+    flex: 1 1 50%;
+    font-family: $font;
+    min-width: 550px;
+    &__title {
+        font-size: $f28;
+        color: #222;
+        font-weight: bold;
+        margin-bottom: 24px;
+    }
+}
+.article {
+    color: #444;
+    font-size: $f17;
+    line-height: $f18;
+    margin-bottom: 65px;
+    &__title {
+        font-size: $f18;
+        color: #222;
+        font-weight: bold;
+        margin: 40px 0 16px 0;
+    }
+    &__title-small {
+        color: #222;
+        font-weight: bold;
+        margin: 16px 0;
+    }
+
+    &__text {
+        margin: 25px 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 8px;
+        & li {
+            padding-left: 24px;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background-color: #222;
+            }
+        }
+    }
+    & a {
+        color: #444;
+    }
+}
+
+.import {
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
 }
 
 //todo Pages buttons
 
 .pages-buttons {
     &__box {
-        margin-top: 32px;
+        padding: 24px 0;
     }
 
     &__list {
@@ -447,117 +447,6 @@ $mw: 1248px;
         font-size: $f18;
         line-height: 1.5rem;
         color: #fff;
-    }
-}
-
-//todo News
-
-.news {
-    &__box {
-    }
-
-    &__list {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        gap: 14px;
-    }
-
-    &__item {
-        flex: 1 1 23%;
-        min-width: 290px;
-        height: 170px;
-        border-radius: 4px;
-        background-color: #fff;
-        font-family: $font;
-        font-size: $f16;
-        line-height: $f18;
-        color: #222222;
-        overflow: hidden;
-        padding: 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    &__title {
-    }
-
-    &__info {
-        font-size: $f13;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    &__tag {
-        padding: 4px 8px;
-    }
-
-    &__date {
-        color: #777;
-    }
-}
-
-.subscription-form {
-    &__input-box {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        border-radius: 4px;
-        overflow: hidden;
-    }
-    &__title {
-    }
-
-    &__input {
-        width: 100%;
-        line-height: 21px;
-        padding: 12px;
-        border: 1px solid #22222280;
-    }
-    &__button {
-        height: 100%;
-        min-width: 45px;
-        background-color: #0052d7;
-    }
-}
-
-//todo Advertisement
-
-.advertisement {
-    &__box {
-        margin-bottom: 80px;
-    }
-
-    &__description {
-    }
-
-    &__list {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 14px;
-    }
-
-    &__link-outside {
-        border: 2px solid #fff;
-        flex: 1 1 23%;
-        height: 145px;
-        min-width: 290px;
-        max-width: 350px;
-        height: 170px;
-        border-radius: 4px;
-        overflow: hidden;
-    }
-
-    &__picture {
-        width: 100%;
-        height: 100%;
     }
 }
 

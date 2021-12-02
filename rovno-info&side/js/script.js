@@ -111,3 +111,16 @@ btn.on('click', function (e) {
     $('html, body').animate({ scrollTop: 0 }, '300');
 });
 
+// var ancor = $('.side-menu__ancor');
+
+// ancor.on('click', function (e) {
+//     e.preventDefault();
+//     $('html, body').animate({ scrollTop: 0 }, '300');
+
+// });
+
+// ancor.on('click', function (e) {
+//     $(`html, body').animate({
+//     scrollTop: bottom
+// }, 300);
+// });
