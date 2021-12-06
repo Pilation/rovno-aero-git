@@ -437,7 +437,7 @@ span {
 .header__border {
   height: 40px;
   width: 1px;
-  background-color: #222222 66;
+  background-color: #22222266;
 }
 
 .header__time {
@@ -856,7 +856,7 @@ span {
   width: 100%;
   line-height: 21px;
   padding: 12px;
-  border: 1px solid #222222 80;
+  border: 1px solid #22222280;
 }
 
 .subscription-form__button {
@@ -928,7 +928,7 @@ span {
       flex-wrap: wrap;
   padding: 40px 0;
   gap: 16px;
-  border-bottom: 1px solid #222222 80;
+  border-bottom: 1px solid #22222280;
 }
 
 .footer-menu__list {

@@ -176,7 +176,7 @@ $grey: #222222;
     &__border {
         height: 40px;
         width: 1px;
-        background-color: $grey 66;
+        background-color: #22222266;
     }
 
     &__time {
@@ -535,7 +535,7 @@ $grey: #222222;
         width: 100%;
         line-height: 21px;
         padding: 12px;
-        border: 1px solid $grey 80;
+        border: 1px solid #22222280;
     }
     &__button {
         height: 100%;
@@ -599,7 +599,7 @@ $grey: #222222;
     flex-wrap: wrap;
     padding: 40px 0;
     gap: 16px;
-    border-bottom: 1px solid $grey 80;
+    border-bottom: 1px solid #22222280;
     &__list {
         flex: 1 1 30%;
         min-width: 270px;
