@@ -400,7 +400,7 @@ span {
   background-color: transparent;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 10;
 }
 
 .header__upper-box {
@@ -437,7 +437,7 @@ span {
 .header__border {
   height: 40px;
   width: 1px;
-  background-color: #22222266;
+  background-color: #222222 66;
 }
 
 .header__time {
@@ -465,7 +465,7 @@ span {
 }
 
 .header__menu.fixed {
-  background-color: white;
+  background-color: #fff;
   margin: 0 auto;
   width: 100%;
   position: fixed;
@@ -518,13 +518,13 @@ span {
 }
 
 .header-dropdown {
-  z-index: 2;
+  z-index: 1;
   position: absolute;
   left: 0;
   top: 140px;
-  width: 100vw;
+  width: 100%;
   padding: 60px 0;
-  background-color: white;
+  background-color: #fff;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -583,15 +583,7 @@ span {
   z-index: 0;
 }
 
-.header-slider__item {
-  position: relative;
-}
-
-.header-slider__mask {
-  position: relative;
-}
-
-.header-slider__mask::after {
+.header-slider__item::after {
   content: "";
   position: absolute;
   left: 0;
@@ -600,6 +592,7 @@ span {
   height: 100vh;
   background-color: #000;
   opacity: 0.3;
+  z-index: 0;
 }
 
 .header-slider img {
@@ -617,7 +610,6 @@ span {
   left: 50%;
   -webkit-transform: translateY(133px);
           transform: translateY(133px);
-  z-index: 100;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -647,7 +639,7 @@ span {
       -ms-flex-align: center;
           align-items: center;
   padding: 8px;
-  background-color: #22222299;
+  background-color: #222222 99;
   border-radius: 2px;
 }
 
@@ -864,7 +856,7 @@ span {
   width: 100%;
   line-height: 21px;
   padding: 12px;
-  border: 1px solid #22222280;
+  border: 1px solid #222222 80;
 }
 
 .subscription-form__button {
@@ -936,7 +928,7 @@ span {
       flex-wrap: wrap;
   padding: 40px 0;
   gap: 16px;
-  border-bottom: 1px solid #22222280;
+  border-bottom: 1px solid #222222 80;
 }
 
 .footer-menu__list {
@@ -1035,7 +1027,7 @@ span {
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: #22222280;
+  color: #222222 80;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
