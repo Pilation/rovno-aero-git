@@ -109,8 +109,6 @@ $mw: 1184px;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #f1f4f6;
-    // background-color: rgb(238, 242, 244);
-    // background-color: red;
 }
 
 .grey-button {
@@ -294,7 +292,7 @@ $mw: 1184px;
 
 .header-slider {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     z-index: 0;
     &__list {
@@ -310,7 +308,7 @@ $mw: 1184px;
             position: absolute;
             left: 0;
             top: 0;
-            width: 100vw;
+            width: 100%;
             height: 100vh;
             background-color: #000;
             opacity: 0.3;
@@ -318,7 +316,7 @@ $mw: 1184px;
     }
 
     img {
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         object-fit: cover;
     }
