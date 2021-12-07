@@ -70,31 +70,16 @@ $(document).ready(function () {
         $('.header__burger,.header-menu,.header__buttons,.header-above__menu,.main').toggleClass('active');
         $('body').toggleClass('lock');
     });
-    // $('.period-products__green').click(function (event) {
-    //     $('.period-products__green img').toggleClass('fullscreen');
-    // });
-    // $('.fresh-blood__card').click(function (event) {
-    //     $('.fresh-blood__card').toggleClass('fullscreen');
-    // });
-    // $('.fresh-blood__picture').click(function (event) {
-    //     $('.fresh-blood__picture').toggleClass('fullscreen');
-    // });
-    // $('.quiz').click(function (event) {
-    //     $('.quiz').toggleClass('fullscreen');
-    // });
 });
 
 $(window).scroll(function () {
     var scroll = $(window).scrollTop();
-
-    //>=, not <=
     if (scroll >= 80) {
-        //clearHeader, not clearheader - caps H
         $(".header__menu").addClass("fixed");
     } else {
         $(".header__menu").removeClass("fixed");
     }
-}); //missing );
+});
 
 var btn = $('.go-top-button');
 
