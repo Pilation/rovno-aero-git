@@ -272,7 +272,7 @@ span {
   padding: 10px 16px;
   border-radius: 4px;
   background-color: #e5e8ee;
-  color: #222;
+  color: #222222;
 }
 
 .section-description {
@@ -292,7 +292,7 @@ span {
           justify-content: space-between;
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
-  color: #222;
+  color: #222222;
 }
 
 .section-description__link {
@@ -301,7 +301,7 @@ span {
   padding: 10px 16px;
   border-radius: 4px;
   background-color: #e5e8ee;
-  color: #222;
+  color: #222222;
 }
 
 header:hover:before {
@@ -399,7 +399,7 @@ header:before {
 }
 
 .header__menu.fixed .header__link {
-  color: #222;
+  color: #222222;
   opacity: 0.7;
 }
 
@@ -625,7 +625,7 @@ header:before {
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: #222;
+  color: #222222;
 }
 
 .footer-contacts {
@@ -648,7 +648,7 @@ header:before {
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: #222;
+  color: #222222;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -671,7 +671,7 @@ header:before {
 }
 
 .footer-contacts__email {
-  color: #222;
+  color: #222222;
 }
 
 .footer-contacts__icons {
@@ -699,7 +699,7 @@ header:before {
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: #222 80;
+  color: #222222 80;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -736,7 +736,7 @@ header:before {
 .header a,
 .header,
 .header__language {
-  color: #222;
+  color: #222222;
 }
 
 .wrapper {
@@ -757,7 +757,7 @@ header:before {
   width: 100%;
   height: 4px;
   border-radius: 1px 1px 0 0;
-  background: #222;
+  background: #222222;
 }
 
 .breadcrumbs {
@@ -784,7 +784,7 @@ header:before {
 
 .breadcrumbs__list a {
   display: inline-block;
-  color: #222;
+  color: #222222;
 }
 
 .breadcrumbs__list span {
@@ -793,130 +793,8 @@ header:before {
 
 .breadcrumbs__list span::before {
   font-size: 10px;
-  color: #222;
+  color: #222222;
   margin: 0 10px;
-}
-
-.info-aside {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 5%;
-}
-
-.side-menu {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 15%;
-          flex: 1 1 15%;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  min-width: 250px;
-  width: 250px;
-  font-family: "Roboto", sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 16px;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 80px;
-}
-
-.side-menu__box {
-  background-color: #dbdee640;
-  border-radius: 4px;
-}
-
-.side-menu__title {
-  width: 100%;
-  padding: 24px;
-  font-size: 1rem;
-  line-height: 1.0625rem;
-  font-weight: bold;
-  color: #222;
-  border-bottom: 1px solid #e6e6e6;
-}
-
-.side-menu__title span {
-  display: inline-block;
-}
-
-.side-menu__title span::before {
-  font-size: 14px;
-  color: #222;
-  margin-right: 10px;
-}
-
-.side-menu__ancors {
-  padding: 24px;
-}
-
-.side-menu__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 12px;
-}
-
-.side-menu__ancor {
-  color: #777;
-  font-size: 0.975rem;
-  line-height: 1rem;
-}
-
-.side-menu__link {
-  padding: 24px;
-  position: relative;
-  border-bottom: 1px solid #e6e6e6;
-}
-
-.side-menu__link::before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  border: 6px solid transparent;
-  border-top: 6px solid #dbdee6;
-  border-right: 6px solid #dbdee6;
-}
-
-.side-menu__link:last-child {
-  border-bottom: none;
-}
-
-.side-menu__small-title {
-  font-size: 0.975rem;
-  font-weight: bold;
-  color: #222;
-  margin-bottom: 10px;
-}
-
-.side-menu__small-description {
-  font-size: 0.8125rem;
-  color: #9b9b9b;
-  line-height: 0.975rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .main-info {
@@ -926,6 +804,10 @@ header:before {
   font-family: "Roboto", sans-serif;
   min-width: 550px;
   padding-bottom: 120px;
+}
+
+.main-info__box {
+  padding: 0 10px;
 }
 
 .main-info__title {

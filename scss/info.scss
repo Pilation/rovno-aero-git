@@ -36,7 +36,7 @@ $f24: 1.5rem;
 $f26: 1.625rem;
 $f28: 1.75rem;
 $mw: 1184px;
-$grey: #222;
+$grey: #222222;
 
 .container {
     max-width: $mw;
@@ -450,7 +450,7 @@ header:before {
         width: 100%;
         height: 4px;
         border-radius: 1px 1px 0 0;
-        background: $grey;
+        background: #222222;
     }
 }
 
@@ -467,7 +467,7 @@ header:before {
         justify-content: flex-start;
         & a {
             display: inline-block;
-            color: $grey;
+            color: #222222;
         }
         & span {
             display: inline-block;
@@ -479,107 +479,18 @@ header:before {
         }
     }
 }
-.info-aside {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5%;
-}
-.side-menu {
-    flex: 1 1 15%;
-    align-self: flex-start;
-    min-width: 250px;
-    width: 250px;
-    font-family: $font;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    position: sticky;
-    top: 80px;
-    &__box {
-        background-color: #dbdee640;
-        border-radius: 4px;
-    }
 
-    &__title {
-        width: 100%;
-        padding: 24px;
-        font-size: $f16;
-        line-height: $f17;
-        font-weight: bold;
-        color: $grey;
-        border-bottom: 1px solid #e6e6e6;
-        & span {
-            display: inline-block;
-            &::before {
-                font-size: 14px;
-                color: $grey;
-                margin-right: 10px;
-            }
-        }
-    }
-
-    &__ancors {
-        padding: 24px;
-    }
-
-    &__list {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    &__ancor {
-        color: #777;
-        font-size: $f15;
-        line-height: $f16;
-    }
-
-    &__link {
-        padding: 24px;
-        position: relative;
-        border-bottom: 1px solid #e6e6e6;
-        &::before {
-            content: "";
-            position: absolute;
-            top: 8px;
-            right: 8px;
-            border: 6px solid transparent;
-            border-top: 6px solid #dbdee6;
-            border-right: 6px solid #dbdee6;
-        }
-        &:last-child {
-            border-bottom: none;
-        }
-    }
-
-    &__small-title {
-        font-size: $f15;
-        font-weight: bold;
-        color: $grey;
-        margin-bottom: 10px;
-    }
-
-    &__small-description {
-        font-size: $f13;
-        color: #9b9b9b;
-        line-height: $f15;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-}
 .main-info {
     flex: 1 1 60%;
     font-family: $font;
     min-width: 550px;
     padding-bottom: 120px;
+    &__box {
+        padding: 0 10px;
+    }
     &__title {
         font-size: $f28;
-        color: $grey;
+        color: #222;
         font-weight: bold;
         margin-bottom: 24px;
     }
@@ -591,12 +502,12 @@ header:before {
     margin-bottom: 65px;
     &__title {
         font-size: $f18;
-        color: $grey;
+        color: #222;
         font-weight: bold;
         margin: 40px 0 16px 0;
     }
     &__title-small {
-        color: $grey;
+        color: #222;
         font-weight: bold;
         margin: 16px 0;
     }
@@ -622,7 +533,7 @@ header:before {
                 width: 6px;
                 height: 6px;
                 border-radius: 50%;
-                background-color: $grey;
+                background-color: #222;
             }
         }
     }
