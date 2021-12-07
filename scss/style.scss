@@ -151,6 +151,9 @@ $grey: #222222;
     top: 0;
     left: 0;
     z-index: 10;
+    font-family: $font;
+    font-size: $f15;
+    color: #fff;
     &__upper-box {
         width: 100%;
         display: flex;
@@ -162,7 +165,6 @@ $grey: #222222;
 
         font-weight: 400;
         line-height: 100%;
-        color: #fff;
     }
 
     &__logo {
@@ -178,11 +180,6 @@ $grey: #222222;
         width: 1px;
         background-color: #22222266;
     }
-
-    &__time {
-        font-family: $font;
-        font-size: $f15;
-    }
     &__language {
         cursor: pointer;
         margin-left: auto;
@@ -195,12 +192,8 @@ $grey: #222222;
         height: 60px;
         border-top: 1px solid #eee;
         border-bottom: 1px solid #eee;
-
-        font-family: $font;
         font-weight: 400;
         line-height: 60px;
-        color: #fff;
-        font-size: $f15;
 
         &.fixed {
             background-color: #fff;
@@ -232,40 +225,34 @@ $grey: #222222;
         opacity: 0.7;
     }
 }
-// время в шапке
 .time-date {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    &__description {
+    gap: 10px;
+    & span:nth-child(1) {
+        margin-right: 20px;
     }
 }
-// .time {
-// }
-// .weather {
-// }
+
+.shadow-box {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #00000040;
+}
 
 .header-dropdown {
-    z-index: 1;
-    position: absolute;
+    z-index: 2;
+    position: fixed;
     left: 0;
     top: 140px;
     width: 100%;
     padding: 60px 0;
     background-color: #fff;
     height: fit-content;
-    visibility: hidden;
-    // &::before {
-    //     content: "";
-    //     position: absolute;
-    //     left: 0;
-    //     top: 0;
-    //     width: 100%;
-    //     height: 100vh;
-    //     background-color: black;
-    //     z-index: -1;
-    //     // visibility: hidden;
-    // }
 
     &__box {
         display: flex;
@@ -292,8 +279,12 @@ $grey: #222222;
         }
     }
 }
+
 /* Show the dropdown menu on hover */
-.header__item_dropdown:hover .header-dropdown {
+// .header__item_dropdown:hover .header-dropdown {
+//     visibility: visible;
+// }
+.header__item_dropdown:hover .shadow-box {
     visibility: visible;
 }
 
