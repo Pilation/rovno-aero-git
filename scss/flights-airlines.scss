@@ -1,54 +1,13 @@
 @import "_null.scss";
 @import "_fonts.scss";
-@import "_slick-theme.scss";
-@import "_slick.scss";
-@import "_sliders.scss";
-
-// @keyframes shake {
-//     0% {
-//         transform: translate(1px, 1px) rotate(0deg);
-//     }
-//     10% {
-//         transform: translate(-1px, -2px) rotate(-1deg);
-//     }
-//     20% {
-//         transform: translate(-3px, 0px) rotate(1deg);
-//     }
-//     30% {
-//         transform: translate(3px, 2px) rotate(0deg);
-//     }
-//     40% {
-//         transform: translate(1px, -1px) rotate(1deg);
-//     }
-//     50% {
-//         transform: translate(-1px, 2px) rotate(-1deg);
-//     }
-//     60% {
-//         transform: translate(-3px, 1px) rotate(0deg);
-//     }
-//     70% {
-//         transform: translate(3px, 1px) rotate(-1deg);
-//     }
-//     80% {
-//         transform: translate(-1px, -1px) rotate(1deg);
-//     }
-//     90% {
-//         transform: translate(1px, 2px) rotate(0deg);
-//     }
-//     100% {
-//         transform: translate(1px, -2px) rotate(-1deg);
-//     }
 
 // $f190: calc(80px + 110 * ((100vw - 420px) / (1440 - 420)));
 // $f100: calc(60px + 40 * ((100vw - 420px) / (1440 - 420)));
 
 //! Same
-
 html {
     font-size: 16px;
     scroll-behavior: smooth;
-}
-body {
 }
 p,
 h1,
@@ -61,7 +20,6 @@ span {
     display: block;
     width: fit-content;
 }
-
 $font: "Roboto", sans-serif;
 $f12: 0.75rem;
 $f13: 0.8125rem;
@@ -75,13 +33,11 @@ $f26: 1.625rem;
 $f28: 1.75rem;
 $mw: 1184px;
 $grey: #222222;
-
 .container {
     max-width: $mw;
     margin: 0 auto;
     padding: 0 7px;
 }
-
 //todo Go-top-button
 .go-top-button {
     position: fixed;
@@ -104,15 +60,6 @@ $grey: #222222;
         opacity: 0.7;
     }
 }
-
-.wrapper {
-    background-image: url(../img/background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #f1f4f6;
-}
-
 .grey-button {
     font-family: $font;
     font-size: $f14;
@@ -122,7 +69,6 @@ $grey: #222222;
     background-color: #e5e8ee;
     color: $grey;
 }
-
 .section-description {
     margin: 80px 0 24px 0;
     display: flex;
@@ -145,7 +91,6 @@ $grey: #222222;
         color: $grey;
     }
 }
-
 //todo Header
 header:hover:before {
     opacity: 1;
@@ -158,7 +103,6 @@ header:before {
     height: 100%;
     position: fixed;
     left: 0;
-    // top: 140px;
     top: 0;
     background: rgba(0, 0, 0, 0.2);
     opacity: 0;
@@ -169,7 +113,6 @@ header:before {
     transition: all 0.3s;
     pointer-events: none;
 }
-
 .header {
     width: 100%;
     position: absolute;
@@ -204,7 +147,7 @@ header:before {
     &__border {
         height: 40px;
         width: 1px;
-        background-color: #eeeeee4d;
+        background-color: #eee;
     }
     &__language {
         cursor: pointer;
@@ -216,8 +159,8 @@ header:before {
 
     &__menu {
         height: 60px;
-        border-top: 1px solid #eeeeee4d;
-        border-bottom: 1px solid #eeeeee4d;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
         font-weight: 400;
         line-height: 60px;
 
@@ -251,23 +194,6 @@ header:before {
         opacity: 0.7;
     }
 }
-
-.current {
-    position: relative;
-    &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        z-index: 10;
-        bottom: 1px;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        border-radius: 1px 1px 0 0;
-        background: #eeeeee;
-    }
-}
-
 .time-date {
     display: flex;
     flex-direction: row;
@@ -277,12 +203,6 @@ header:before {
         margin-right: 20px;
     }
 }
-
-//todo Show the dropdown menu on hover
-.header__item_dropdown:hover .header-dropdown {
-    visibility: visible;
-}
-
 .header-dropdown {
     z-index: 2;
     position: absolute;
@@ -322,7 +242,10 @@ header:before {
         }
     }
 }
-
+/* Show the dropdown menu on hover */
+.header__item_dropdown:hover .header-dropdown {
+    visibility: visible;
+}
 //todo Pages buttons
 .pages-buttons {
     &__box {
@@ -384,7 +307,6 @@ header:before {
         color: #fff;
     }
 }
-
 //todo footer
 .footer {
     background-color: #fff;
@@ -394,7 +316,6 @@ header:before {
     &__made-by {
     }
 }
-
 .footer-menu {
     display: flex;
     flex-direction: row;
@@ -460,7 +381,6 @@ header:before {
         }
     }
 }
-
 //todo Copyright
 .copyright {
     font-family: $font;
@@ -485,281 +405,185 @@ header:before {
         }
     }
 }
+//! Same
 
-//! Unique
-
-//todo Header-slider
-.header-slider {
+//! Non-main page
+.header a,
+.header,
+.header__language {
+    color: $grey;
+}
+.wrapper {
+    background-color: #eef2f4;
+    font-family: $font;
+}
+.current {
     position: relative;
-    width: 100%;
-    height: 100vh;
-    z-index: 0;
-    &__list {
-    }
-
-    &__item {
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100vh;
-            background-color: #000;
-            opacity: 0.3;
-            z-index: 0;
-        }
-    }
-
-    img {
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 10;
+        bottom: 1px;
+        left: 0;
         width: 100%;
-        height: 100vh;
-        object-fit: cover;
-    }
-
-    &__navigation {
-        font-size: 0;
-        position: absolute;
-        z-index: 1;
-        top: 50%;
-        left: 50%;
-        transform: translateY(133px);
-
-        width: fit-content;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 24px;
-        border-radius: 2px;
-    }
-    &__dots {
-        height: 32px;
-        display: flex;
-        align-items: center;
-        padding: 8px;
-        background-color: $grey 99;
-        border-radius: 2px;
-    }
-    &__arrows {
-        border-radius: 2px;
-        height: 32px;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 8px;
-    }
-
-    &__description {
-        overflow: hidden;
-        height: 246px;
-        position: absolute;
-        z-index: 1;
-        font-family: $font;
-        border-radius: 2px;
-        z-index: 100;
-        top: -200px;
-        left: 50%;
-        top: 50%;
-        transform: translateY(-123px);
-        width: 29%;
-    }
-
-    &__tag {
-        font-size: $f13;
-        line-height: $f16;
-        padding: 4px 12px;
-        background-color: #ffffff4d;
-        color: #fff;
-        margin-bottom: 25px;
-    }
-
-    &__link {
-        color: #fff;
-        font-size: $f26;
-        line-height: 2.5rem;
+        height: 4px;
+        border-radius: 1px 1px 0 0;
+        background: #222222;
     }
 }
-
-//todo News
-.news {
-    &__box {
-    }
-
+.breadcrumbs {
+    font-family: $font;
+    font-size: $f13;
+    line-height: $f15;
+    color: #777;
+    margin-top: 140px;
+    padding: 40px 0;
     &__list {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        gap: 14px;
-    }
-
-    &__item {
-        flex: 1 1 23%;
-        min-width: 290px;
-        height: 170px;
-        border-radius: 4px;
-        background-color: #fff;
-        font-family: $font;
-        font-size: $f16;
-        line-height: $f18;
-        color: $grey;
-        overflow: hidden;
-        padding: 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    &__title {
-    }
-
-    &__info {
-        font-size: $f13;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    &__tag {
-        padding: 4px 8px;
-    }
-
-    &__date {
-        color: #777;
+        & a {
+            display: inline-block;
+            color: #222222;
+        }
         & span {
             display: inline-block;
             &::before {
-                font-size: 11px;
+                font-size: 10px;
+                color: $grey;
+                margin: 0 10px;
             }
         }
     }
 }
+.import {
+    background-color: #fff;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+//! Non-main page
 
-.subscription-form {
-    &__input-box {
+.airlines {
+    padding-bottom: 120px;
+    &__box {
         display: flex;
         flex-direction: row;
+        align-items: flex-start;
         justify-content: space-between;
-        border-radius: 4px;
-        overflow: hidden;
+        flex-wrap: wrap;
+        gap: 15px;
     }
-    &__title {
+    &__left,
+    &__right {
+        flex: 1 1 49%;
+        min-width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
     }
 
-    &__input {
+    &__card {
         width: 100%;
-        line-height: 21px;
-        padding: 12px;
-        border: 1px solid #22222280;
+        background-color: #fff;
+        border-radius: 10px;
+        min-width: 400px;
     }
-    &__button {
-        height: 100%;
-        min-width: 45px;
-        background-color: #0052d7;
-        & span {
-            width: 100%;
+
+    &__header {
+        color: $grey;
+        padding: 30px 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 40px;
+        & h2 {
+            font-size: $f16;
+            line-height: $f18;
         }
-        & span::before {
-            font-size: 20px;
-            color: #fff;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    &__logo {
+        width: 150px;
+        min-width: 150px;
+        & img {
+            margin: 0 auto;
+            max-width: 100%;
         }
+    }
+    &__more,
+    &__less {
+        transition: all 0.5s;
+        width: 100%;
+        font-size: $f15;
+        padding: 16px 32px;
+        color: #777;
+        & .icon-arrr {
+            margin-left: 10px;
+            display: inline-block;
+            transform-origin: center;
+            transform: rotate(90deg);
+            font-size: $f13;
+            &::before {
+                padding-left: 5px;
+            }
+        }
+        & .icon-arrl {
+            margin-left: 10px;
+            display: inline-block;
+            transform-origin: center;
+            transform: rotate(90deg);
+            font-size: $f13;
+            &::before {
+                padding-left: 5px;
+            }
+        }
+    }
+    &__less {
+        background-color: #dbdee640;
     }
 }
-
-//todo Advertisement
-.advertisement {
+.airline {
+    visibility: hidden;
+    height: fit-content;
+    max-height: 0;
+    opacity: 0;
+    transition: opacity 0.5s, max-height 1s;
+    &.more {
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s, max-height 1s;
+    }
     &__box {
-        margin-bottom: 80px;
-    }
-
-    &__description {
-    }
-
-    &__list {
+        padding: 30px;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         flex-wrap: wrap;
-        gap: 14px;
+        gap: 10px;
     }
-
-    &__link-outside {
-        border: 2px solid #fff;
-        flex: 1 1 23%;
-        height: 145px;
-        min-width: 290px;
-        max-width: 350px;
-        height: 170px;
-        border-radius: 4px;
-        overflow: hidden;
-    }
-
-    &__picture {
-        width: 100%;
-        height: 100%;
-    }
-}
-
-//! media
-
-@media (max-width: 1279px) {
-    .container {
-        max-width: 914px;
-    }
-}
-@media (max-width: 1921px) {
-    .container {
-        max-width: 1440px;
-    }
-}
-@media (max-width: 1600px) {
-    .container {
-        max-width: 1312px;
-    }
-}
-@media (max-width: 1279px) {
-    .container {
-        max-width: 914px;
-    }
-}
-//! hover
-@media screen and (min-device-width: 768px) {
-    .header {
-        &__link:hover {
-            opacity: 1;
+    &__info {
+        flex: 1 1 48%;
+        font-size: $f15;
+        & span {
+            margin-bottom: 5px;
+            color: #777;
         }
-    }
-    .header-dropdown {
-        &__link {
-            &:hover {
-                color: red;
-                text-decoration: underline;
-            }
-        }
-        &__link_inactive {
-            pointer-events: none;
-        }
-    }
-    .footer-menu {
         & a {
-            &:hover {
-                color: red;
-                text-decoration: underline;
-            }
+            margin-bottom: 5px;
+            text-decoration: underline;
+            color: #777;
         }
     }
-    .footer-contacts {
-        &__icon {
-            & span::before {
-                font-size: 20px;
-            }
-            & a:hover {
-                text-decoration: none;
-            }
-        }
+    &__title {
+        color: $grey;
+        margin-bottom: 10px;
     }
 }

@@ -1,3 +1,73 @@
+$(document).ready(function () {
+    $('.header__burger').click(function (event) {
+        $('.header__burger,.header-menu,.header__buttons,.header-above__menu,.main').toggleClass('active');
+        $('body').toggleClass('lock');
+    });
+});
+
+$(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 80) {
+        $(".header__menu, .header-dropdown").addClass("fixed");
+    } else {
+        $(".header__menu, .header-dropdown").removeClass("fixed");
+    }
+});
+
+var btn = $('.go-top-button');
+
+$(window).scroll(function () {
+    if ($(window).scrollTop() > 300) {
+        btn.addClass('show');
+    } else {
+        btn.removeClass('show');
+    }
+});
+
+btn.on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, '300');
+});
+
+
+// $(document).ready(function () {
+//     $('.airlines__more').click(function (event) {
+//         $('.airline').toggleClass('active');
+//     });
+// });
+
+jQuery(function ($) {
+    $('body').on('click', '.airlines__more', function () {
+        $(this).addClass(`airlines__less`).removeClass(`airlines__more`);
+        $(this).html('Приховати контакти <span class="icon-arrl"></span>').siblings('.airline').addClass('more');
+    });
+    $('body').on('click', '.airlines__less', function () {
+        $(this).removeClass(`airlines__less`).addClass(`airlines__more`);
+        $(this).html('Показати контакти <span class="icon-arrr"></span>').siblings('.airline').removeClass('more');
+    });
+
+});
+
+
+
+
+// //todo More: Lead
+// $('body').on('click', '.more-lead', function () {
+//     emh($(this).siblings('.lead'));
+//     $(this).html('Less...').addClass('less-lead').removeClass('more-lead');
+// });
+
+// //todo Less: Lead
+// $('body').on('click', '.less-lead', function () {
+//     reh($(this).siblings('.lead'));
+//     $(this).html('More...').addClass('more-lead').removeClass('less-lead');
+// });
+
+
+
+
+
+
 
 $('.header-slider').slick({
     arrows: true,
@@ -64,35 +134,3 @@ $('.header-slider').slick({
 
     // ],
 });
-
-$(document).ready(function () {
-    $('.header__burger').click(function (event) {
-        $('.header__burger,.header-menu,.header__buttons,.header-above__menu,.main').toggleClass('active');
-        $('body').toggleClass('lock');
-    });
-});
-
-$(window).scroll(function () {
-    var scroll = $(window).scrollTop();
-    if (scroll >= 80) {
-        $(".header__menu").addClass("fixed");
-    } else {
-        $(".header__menu").removeClass("fixed");
-    }
-});
-
-var btn = $('.go-top-button');
-
-$(window).scroll(function () {
-    if ($(window).scrollTop() > 300) {
-        btn.addClass('show');
-    } else {
-        btn.removeClass('show');
-    }
-});
-
-btn.on('click', function (e) {
-    e.preventDefault();
-    $('html, body').animate({ scrollTop: 0 }, '300');
-});
-

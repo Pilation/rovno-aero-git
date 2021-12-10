@@ -3,15 +3,12 @@
 
 // $f190: calc(80px + 110 * ((100vw - 420px) / (1440 - 420)));
 // $f100: calc(60px + 40 * ((100vw - 420px) / (1440 - 420)));
-$shadow: calc(100% -140px);
 
 //! Same
-
 html {
     font-size: 16px;
     scroll-behavior: smooth;
 }
-
 p,
 h1,
 h2,
@@ -23,7 +20,6 @@ span {
     display: block;
     width: fit-content;
 }
-
 $font: "Roboto", sans-serif;
 $f12: 0.75rem;
 $f13: 0.8125rem;
@@ -36,14 +32,12 @@ $f24: 1.5rem;
 $f26: 1.625rem;
 $f28: 1.75rem;
 $mw: 1184px;
-$grey: #222;
-
+$grey: #222222;
 .container {
     max-width: $mw;
     margin: 0 auto;
     padding: 0 7px;
 }
-
 //todo Go-top-button
 .go-top-button {
     position: fixed;
@@ -66,15 +60,6 @@ $grey: #222;
         opacity: 0.7;
     }
 }
-
-.wrapper {
-    background-image: url(../img/background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #f1f4f6;
-}
-
 .grey-button {
     font-family: $font;
     font-size: $f14;
@@ -84,7 +69,6 @@ $grey: #222;
     background-color: #e5e8ee;
     color: $grey;
 }
-
 .section-description {
     margin: 80px 0 24px 0;
     display: flex;
@@ -107,7 +91,6 @@ $grey: #222;
         color: $grey;
     }
 }
-
 //todo Header
 header:hover:before {
     opacity: 1;
@@ -120,7 +103,7 @@ header:before {
     height: 100%;
     position: fixed;
     left: 0;
-    top: 140px;
+    top: 0;
     background: rgba(0, 0, 0, 0.2);
     opacity: 0;
     visibility: hidden;
@@ -130,7 +113,6 @@ header:before {
     transition: all 0.3s;
     pointer-events: none;
 }
-
 .header {
     width: 100%;
     position: absolute;
@@ -221,10 +203,9 @@ header:before {
         margin-right: 20px;
     }
 }
-
 .header-dropdown {
     z-index: 2;
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 140px;
     width: 100%;
@@ -232,6 +213,9 @@ header:before {
     background-color: #fff;
     height: fit-content;
     visibility: hidden;
+    &.fixed {
+        position: fixed;
+    }
 
     &__box {
         display: flex;
@@ -258,12 +242,10 @@ header:before {
         }
     }
 }
-
 /* Show the dropdown menu on hover */
 .header__item_dropdown:hover .header-dropdown {
     visibility: visible;
 }
-
 //todo Pages buttons
 .pages-buttons {
     &__box {
@@ -281,7 +263,7 @@ header:before {
 
     &__link {
         flex: 1 1 23%;
-        min-width: 290px;
+        min-width: 210px;
         height: 140px;
         position: relative;
         width: 100%;
@@ -325,7 +307,6 @@ header:before {
         color: #fff;
     }
 }
-
 //todo footer
 .footer {
     background-color: #fff;
@@ -335,7 +316,6 @@ header:before {
     &__made-by {
     }
 }
-
 .footer-menu {
     display: flex;
     flex-direction: row;
@@ -401,7 +381,6 @@ header:before {
         }
     }
 }
-
 //todo Copyright
 .copyright {
     font-family: $font;
@@ -426,9 +405,9 @@ header:before {
         }
     }
 }
+//! Same
 
-//! Unique
-
+//! Non-main page
 .header a,
 .header,
 .header__language {
@@ -437,7 +416,6 @@ header:before {
 .wrapper {
     background: #fff;
 }
-
 .current {
     position: relative;
     &::before {
@@ -450,10 +428,9 @@ header:before {
         width: 100%;
         height: 4px;
         border-radius: 1px 1px 0 0;
-        background: $grey;
+        background: #222222;
     }
 }
-
 .breadcrumbs {
     font-family: $font;
     font-size: $f13;
@@ -467,7 +444,7 @@ header:before {
         justify-content: flex-start;
         & a {
             display: inline-block;
-            color: $grey;
+            color: #222222;
         }
         & span {
             display: inline-block;
@@ -479,6 +456,13 @@ header:before {
         }
     }
 }
+.import {
+    background-color: #fff;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+//! Non-main page
+
 .info-aside {
     display: flex;
     flex-direction: row;
@@ -629,9 +613,4 @@ header:before {
     & a {
         color: #444;
     }
-}
-
-.import {
-    border-top: 1px solid #eeeeee;
-    border-bottom: 1px solid #eeeeee;
 }

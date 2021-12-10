@@ -257,14 +257,6 @@ span {
   opacity: 0.7;
 }
 
-.wrapper {
-  background-image: url(../img/background.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #f1f4f6;
-}
-
 .grey-button {
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
@@ -272,7 +264,7 @@ span {
   padding: 10px 16px;
   border-radius: 4px;
   background-color: #e5e8ee;
-  color: #222;
+  color: #222222;
 }
 
 .section-description {
@@ -292,7 +284,7 @@ span {
           justify-content: space-between;
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
-  color: #222;
+  color: #222222;
 }
 
 .section-description__link {
@@ -301,7 +293,7 @@ span {
   padding: 10px 16px;
   border-radius: 4px;
   background-color: #e5e8ee;
-  color: #222;
+  color: #222222;
 }
 
 header:hover:before {
@@ -316,7 +308,7 @@ header:before {
   height: 100%;
   position: fixed;
   left: 0;
-  top: 140px;
+  top: 0;
   background: rgba(0, 0, 0, 0.2);
   opacity: 0;
   visibility: hidden;
@@ -399,7 +391,7 @@ header:before {
 }
 
 .header__menu.fixed .header__link {
-  color: #222;
+  color: #222222;
   opacity: 0.7;
 }
 
@@ -449,7 +441,7 @@ header:before {
 
 .header-dropdown {
   z-index: 2;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 140px;
   width: 100%;
@@ -459,6 +451,10 @@ header:before {
   height: -moz-fit-content;
   height: fit-content;
   visibility: hidden;
+}
+
+.header-dropdown.fixed {
+  position: fixed;
 }
 
 .header-dropdown__box {
@@ -533,7 +529,7 @@ header:before {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 23%;
           flex: 1 1 23%;
-  min-width: 290px;
+  min-width: 210px;
   height: 140px;
   position: relative;
   width: 100%;
@@ -625,7 +621,7 @@ header:before {
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: #222;
+  color: #222222;
 }
 
 .footer-contacts {
@@ -648,7 +644,7 @@ header:before {
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: #222;
+  color: #222222;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -671,7 +667,7 @@ header:before {
 }
 
 .footer-contacts__email {
-  color: #222;
+  color: #222222;
 }
 
 .footer-contacts__icons {
@@ -699,7 +695,7 @@ header:before {
   font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: #222 80;
+  color: #222222 80;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -736,7 +732,7 @@ header:before {
 .header a,
 .header,
 .header__language {
-  color: #222;
+  color: #222222;
 }
 
 .wrapper {
@@ -757,7 +753,7 @@ header:before {
   width: 100%;
   height: 4px;
   border-radius: 1px 1px 0 0;
-  background: #222;
+  background: #222222;
 }
 
 .breadcrumbs {
@@ -784,7 +780,7 @@ header:before {
 
 .breadcrumbs__list a {
   display: inline-block;
-  color: #222;
+  color: #222222;
 }
 
 .breadcrumbs__list span {
@@ -793,8 +789,14 @@ header:before {
 
 .breadcrumbs__list span::before {
   font-size: 10px;
-  color: #222;
+  color: #222222;
   margin: 0 10px;
+}
+
+.import {
+  background-color: #fff;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .info-aside {
@@ -846,7 +848,7 @@ header:before {
   font-size: 1rem;
   line-height: 1.0625rem;
   font-weight: bold;
-  color: #222;
+  color: #222222;
   border-bottom: 1px solid #e6e6e6;
 }
 
@@ -856,7 +858,7 @@ header:before {
 
 .side-menu__title span::before {
   font-size: 14px;
-  color: #222;
+  color: #222222;
   margin-right: 10px;
 }
 
@@ -904,7 +906,7 @@ header:before {
 .side-menu__small-title {
   font-size: 0.975rem;
   font-weight: bold;
-  color: #222;
+  color: #222222;
   margin-bottom: 10px;
 }
 
@@ -930,7 +932,7 @@ header:before {
 
 .main-info__title {
   font-size: 1.75rem;
-  color: #222;
+  color: #222222;
   font-weight: bold;
   margin-bottom: 24px;
 }
@@ -944,13 +946,13 @@ header:before {
 
 .article__title {
   font-size: 1.125rem;
-  color: #222;
+  color: #222222;
   font-weight: bold;
   margin: 40px 0 16px 0;
 }
 
 .article__title-small {
-  color: #222;
+  color: #222222;
   font-weight: bold;
   margin: 16px 0;
 }
@@ -988,14 +990,9 @@ header:before {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #222;
+  background-color: #222222;
 }
 
 .article a {
   color: #444;
-}
-
-.import {
-  border-top: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
 }

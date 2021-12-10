@@ -519,7 +519,7 @@ header:before {
   height: 100%;
   position: fixed;
   left: 0;
-  top: 140px;
+  top: 0;
   background: rgba(0, 0, 0, 0.2);
   opacity: 0;
   visibility: hidden;
@@ -673,7 +673,7 @@ header:before {
 
 .header-dropdown {
   z-index: 2;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 140px;
   width: 100%;
@@ -683,6 +683,10 @@ header:before {
   height: -moz-fit-content;
   height: fit-content;
   visibility: hidden;
+}
+
+.header-dropdown.fixed {
+  position: fixed;
 }
 
 .header-dropdown__box {
@@ -752,7 +756,7 @@ header:before {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 23%;
           flex: 1 1 23%;
-  min-width: 290px;
+  min-width: 210px;
   height: 140px;
   position: relative;
   width: 100%;
