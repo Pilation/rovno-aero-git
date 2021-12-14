@@ -258,7 +258,6 @@ span {
 }
 
 .grey-button {
-  font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
   line-height: 0.875rem;
   padding: 10px 16px;
@@ -282,7 +281,6 @@ span {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
   color: #222222;
 }
@@ -324,7 +322,6 @@ header:before {
   top: 0;
   left: 0;
   z-index: 100;
-  font-family: "Roboto", sans-serif;
   font-size: 0.975rem;
   color: #fff;
 }
@@ -571,7 +568,6 @@ header:before {
 
 .pages-buttons__title {
   margin-top: 16px;
-  font-family: "Roboto", sans-serif;
   font-size: 1.125rem;
   line-height: 1.5rem;
   color: #fff;
@@ -618,7 +614,6 @@ header:before {
 }
 
 .footer-menu a {
-  font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
   line-height: 1rem;
   color: #222222;
@@ -641,7 +636,6 @@ header:before {
 
 .footer-contacts li {
   width: 100%;
-  font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
   line-height: 1rem;
   color: #222222;
@@ -692,7 +686,6 @@ header:before {
 }
 
 .copyright {
-  font-family: "Roboto", sans-serif;
   font-size: 0.875rem;
   line-height: 1rem;
   color: #222222 80;
@@ -758,7 +751,6 @@ header:before {
 }
 
 .breadcrumbs {
-  font-family: "Roboto", sans-serif;
   font-size: 0.8125rem;
   line-height: 0.975rem;
   color: #777;
