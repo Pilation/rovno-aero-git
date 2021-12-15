@@ -1,0 +1,87 @@
+@import "_null.scss";
+@import "_fonts.scss";
+@import "_main-same.scss";
+@import "_header-container-same.scss";
+@import "_pages-buttons-footer.scss";
+
+//! Changed color
+.breadcrumbs {
+    color: #fff;
+    & a {
+        color: #fff;
+    }
+    & span::before {
+        color: #fff;
+    }
+}
+.section-title {
+    color: #fff;
+}
+.wrapper {
+    background-image: none;
+}
+
+.background {
+    background-image: url(../img/contacts-bg.png);
+}
+
+//! Unique
+
+.contacts {
+    &__description {
+        color: #fff;
+        font-size: $f17;
+        line-height: $f24;
+        max-width: 610px;
+        padding-bottom: 120px;
+    }
+    &__box {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    &__right {
+        flex: 1 1 65%;
+        min-width: 520px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    &__left {
+        flex: 1 1 33%;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+    &__text {
+        & h2 {
+            font-size: $f24;
+            line-height: $f28;
+            font-weight: bold;
+            color: $grey;
+        }
+        & p {
+            font-size: $f17;
+            line-height: $f24;
+            color: #444;
+            margin: 20px 0;
+        }
+    }
+}
+
+.info-form {
+    background-color: #fff;
+    padding: 24px;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}

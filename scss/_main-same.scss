@@ -104,14 +104,23 @@ main {
     font-weight: bold;
     margin-bottom: 24px;
 }
+.section-spacer {
+    width: 100%;
+    height: 140px;
+}
 
 .grey-button {
+    display: block;
     font-size: $f14;
     line-height: $f14;
     padding: 10px 16px;
     border-radius: 4px;
     background-color: #e5e8ee;
     color: $grey;
+}
+.red-button {
+    background-color: $rivne-red;
+    color: #fff;
 }
 
 .section-description {
@@ -140,6 +149,158 @@ main {
     background-color: #fff;
     border-top: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
+}
+
+.info-form {
+    width: 100%;
+    border-radius: 4px;
+    & p,
+    & h2 {
+        font-size: $f17;
+        line-height: $f24;
+        color: #444;
+        margin-bottom: 20px;
+    }
+    & h2 {
+        font-weight: bold;
+    }
+    &__form {
+        max-width: 600px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        & div {
+            flex: 1 1 48%;
+            min-width: 280px;
+            font-size: $f14;
+            line-height: $f17;
+            color: $grey;
+        }
+        & label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        & input,
+        & textarea {
+            width: 100%;
+            display: block;
+            border-radius: 4px;
+            padding: 16px;
+            border: 1px solid #e0e0e0;
+            color: #444;
+            &::placeholder {
+            }
+        }
+        & textarea {
+            resize: none;
+            min-height: 150px;
+        }
+    }
+    & button {
+        margin-top: 24px;
+    }
+}
+
+.contacts-card {
+    // width: fit-content;
+    // max-width: 350px;
+    min-width: 230px;
+    border-radius: 4px;
+    background-color: #fff;
+    & span {
+        color: #777777b3;
+    }
+    & a {
+        color: $grey;
+        text-decoration: underline;
+    }
+    & h3 {
+        font-size: $f16;
+        color: $grey;
+        font-weight: bold;
+        padding: 32px;
+    }
+
+    &__column {
+        font-size: $f15;
+        padding: 0 32px 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        & .vip-terminal__item {
+            min-height: 0;
+        }
+    }
+}
+
+.news-card {
+    // width: fit-content;
+    // max-width: 350px;
+    min-width: 230px;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 32px;
+    & h3 {
+        font-size: $f16;
+        color: $grey;
+        font-weight: bold;
+    }
+    & button {
+        margin-top: 15px;
+    }
+}
+
+.social-media {
+    &__card {
+        border-radius: 4px;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-width: 125px;
+        &_facebook {
+            background: #4267b2;
+        }
+        &_instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+        &_twitter {
+            background: #1da1f2;
+        }
+        &_linkedin {
+            background: #0077b5;
+        }
+        &_youtube {
+            background: #f61c0d;
+        }
+    }
+    & span::before {
+        color: #fff;
+        font-size: $f24;
+    }
+    &__title {
+        color: #fff;
+        font-size: $f13;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+}
+
+.contact-card_red {
+    background-color: $rivne-red;
+    & span {
+        color: #ffffffb3;
+    }
+    & a {
+        color: #fff;
+    }
+    & h3 {
+        color: #fff;
+    }
 }
 
 .under-construction {

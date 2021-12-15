@@ -552,13 +552,24 @@ main {
   margin-bottom: 24px;
 }
 
+.section-spacer {
+  width: 100%;
+  height: 140px;
+}
+
 .grey-button {
+  display: block;
   font-size: 0.875rem;
   line-height: 0.875rem;
   padding: 10px 16px;
   border-radius: 4px;
   background-color: #e5e8ee;
   color: #222222;
+}
+
+.red-button {
+  background-color: #e2231e;
+  color: #fff;
 }
 
 .section-description {
@@ -593,6 +604,195 @@ main {
   background-color: #fff;
   border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+}
+
+.info-form {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.info-form p,
+.info-form h2 {
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.info-form h2 {
+  font-weight: bold;
+}
+
+.info-form__form {
+  max-width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+
+.info-form__form div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 48%;
+          flex: 1 1 48%;
+  min-width: 280px;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  color: #222222;
+}
+
+.info-form__form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.info-form__form input,
+.info-form__form textarea {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  color: #444;
+}
+
+.info-form__form textarea {
+  resize: none;
+  min-height: 150px;
+}
+
+.info-form button {
+  margin-top: 24px;
+}
+
+.contacts-card {
+  min-width: 230px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.contacts-card span {
+  color: #777777b3;
+}
+
+.contacts-card a {
+  color: #222222;
+  text-decoration: underline;
+}
+
+.contacts-card h3 {
+  font-size: 1rem;
+  color: #222222;
+  font-weight: bold;
+  padding: 32px;
+}
+
+.contacts-card__column {
+  font-size: 0.975rem;
+  padding: 0 32px 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 16px;
+}
+
+.contacts-card__column .vip-terminal__item {
+  min-height: 0;
+}
+
+.news-card {
+  min-width: 230px;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 32px;
+}
+
+.news-card h3 {
+  font-size: 1rem;
+  color: #222222;
+  font-weight: bold;
+}
+
+.news-card button {
+  margin-top: 15px;
+}
+
+.social-media__card {
+  border-radius: 4px;
+  padding: 10px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  min-width: 125px;
+}
+
+.social-media__card_facebook {
+  background: #4267b2;
+}
+
+.social-media__card_instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-media__card_twitter {
+  background: #1da1f2;
+}
+
+.social-media__card_linkedin {
+  background: #0077b5;
+}
+
+.social-media__card_youtube {
+  background: #f61c0d;
+}
+
+.social-media span::before {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.social-media__title {
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.contact-card_red {
+  background-color: #e2231e;
+}
+
+.contact-card_red span {
+  color: #ffffffb3;
+}
+
+.contact-card_red a {
+  color: #fff;
+}
+
+.contact-card_red h3 {
+  color: #fff;
 }
 
 .under-construction {
@@ -864,13 +1064,7 @@ header:before {
   color: #777;
 }
 
-@media (max-width: 1279px) {
-  .container {
-    max-width: 914px;
-  }
-}
-
-@media (max-width: 1921px) {
+@media (min-width: 1600px) {
   .container {
     max-width: 1440px;
   }
@@ -1299,7 +1493,6 @@ header:before {
       -ms-flex: 1 1 60%;
           flex: 1 1 60%;
   min-width: 550px;
-  padding-bottom: 120px;
 }
 
 .article {
