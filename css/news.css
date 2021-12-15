@@ -714,26 +714,26 @@ main {
   min-height: 0;
 }
 
-.news-card {
+.news-more-card {
   min-width: 230px;
   border-radius: 4px;
   background-color: #fff;
   padding: 32px;
 }
 
-.news-card h3 {
+.news-more-card h3 {
   font-size: 1rem;
   color: #222222;
   font-weight: bold;
 }
 
-.news-card button {
+.news-more-card button {
   margin-top: 15px;
 }
 
 .social-media__card {
   border-radius: 4px;
-  padding: 10px 15px;
+  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -744,7 +744,8 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 10px;
-  min-width: 125px;
+  width: 100%;
+  max-width: 110px;
 }
 
 .social-media__card_facebook {
@@ -1191,7 +1192,7 @@ header:before {
       flex-wrap: wrap;
   padding: 40px 0;
   gap: 16px;
-  border-bottom: 1px solid #22222280;
+  border-bottom: 1px solid #eee;
 }
 
 .footer-menu__list {
@@ -1512,7 +1513,7 @@ header:before {
 .subscription-form__button {
   height: 100%;
   min-width: 45px;
-  background-color: #0052d7;
+  background-color: #e2231e;
 }
 
 .subscription-form__button span {

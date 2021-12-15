@@ -236,7 +236,7 @@ main {
     }
 }
 
-.news-card {
+.news-more-card {
     // width: fit-content;
     // max-width: 350px;
     min-width: 230px;
@@ -256,12 +256,13 @@ main {
 .social-media {
     &__card {
         border-radius: 4px;
-        padding: 10px 15px;
+        padding: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
-        min-width: 125px;
+        width: 100%;
+        max-width: 110px;
         &_facebook {
             background: #4267b2;
         }
