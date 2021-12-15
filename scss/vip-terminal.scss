@@ -1,0 +1,173 @@
+@import "_null.scss";
+@import "_fonts.scss";
+@import "_main-same.scss";
+@import "_header-container-same.scss";
+@import "_pages-buttons-footer.scss";
+
+//! Changed color
+.breadcrumbs {
+    color: #fff;
+    & a {
+        color: #fff;
+    }
+    & span::before {
+        color: #fff;
+    }
+}
+.section-title {
+    color: #fff;
+}
+//! Changed color
+
+.background {
+    background-image: url(../img/VIP-services-bg.jpg);
+}
+
+.vip-terminal {
+    &__description {
+        color: #fff;
+        font-size: $f17;
+        line-height: $f24;
+        max-width: 610px;
+    }
+    &__box {
+    }
+
+    &__header {
+        width: 100%;
+        background-color: #fff;
+        border-radius: 4px;
+    }
+
+    &__small-title {
+        font-size: $f16;
+        color: #222;
+        font-weight: bold;
+        padding: 32px;
+    }
+
+    &__main {
+        margin-top: 14px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    &__also {
+        border-radius: 4px;
+        background-color: #fff;
+    }
+
+    &__contacts {
+        border-radius: 4px;
+        background-color: $rivne-red;
+        & .vip-terminal__small-title {
+            color: #fff;
+        }
+        & .vip-terminal__column {
+            & span {
+                color: #ffffffb3;
+            }
+            & a {
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__order-service {
+        flex: 1 1 35%;
+        background-color: #fff;
+        border-radius: 4px;
+    }
+
+    &__row {
+        font-size: $f15;
+        color: #444;
+        padding: 0 32px 32px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    &__column {
+        flex: 1 1 25%;
+        font-size: $f15;
+        color: #444;
+        padding: 0 32px 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        & .vip-terminal__item {
+            min-height: 0;
+        }
+    }
+
+    &__item {
+        flex: 1 1 18%;
+        min-width: 220px;
+        min-height: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 20px;
+        & span {
+            color: $rivne-red;
+            font-size: $f20;
+        }
+        & p {
+            max-width: 200px;
+        }
+    }
+}
+.container {
+}
+.section-title {
+}
+.icon-passport {
+}
+.icon-suitcase {
+}
+.icon-walking {
+}
+.icon-car {
+}
+.icon-parking {
+}
+.icon-ticket {
+}
+.icon-phone {
+}
+.icon-wifi {
+}
+.icon-bed {
+}
+.select {
+}
+
+select {
+    appearance: none;
+    border: 1px solid #777;
+    outline: 0;
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    background: url(../img/arrdown.svg) no-repeat right 10px center;
+    background-size: 20px 20px;
+    color: #222;
+    border-radius: 4px;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+    &::-ms-expand {
+        display: none;
+    }
+}

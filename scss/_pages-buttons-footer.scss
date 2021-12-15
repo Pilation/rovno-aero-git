@@ -1,0 +1,180 @@
+//todo Pages buttons
+.pages-buttons {
+    &__box {
+        padding: 24px 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    &__link {
+        flex: 1 1 23%;
+        min-width: 210px;
+        height: 140px;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+        overflow: hidden;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            border: 6px solid transparent;
+            border-top: 6px solid #fff;
+            border-right: 6px solid #fff;
+            opacity: 0.45;
+        }
+    }
+
+    &__picture {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__description {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        & span::before {
+            color: #fff;
+            font-size: 20px;
+        }
+    }
+
+    &__title {
+        margin-top: 16px;
+        font-size: $f18;
+        line-height: 1.5rem;
+        color: #fff;
+    }
+}
+
+//todo footer
+.footer {
+    background-color: #fff;
+    &__lower-box {
+    }
+
+    &__made-by {
+    }
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    gap: 16px;
+    border-bottom: 1px solid #22222280;
+    &__list {
+        flex: 1 1 30%;
+        min-width: 270px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    & a {
+        font-size: $f14;
+        line-height: $f16;
+        color: $grey;
+    }
+}
+.footer-contacts {
+    flex: 1 1 33%;
+    min-width: 330px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    & li {
+        width: 100%;
+        font-size: $f14;
+        line-height: $f16;
+        color: $grey;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+    }
+
+    &__title {
+        width: 100%;
+        font-weight: bold;
+        max-width: 130px;
+    }
+
+    &__email {
+        color: $grey;
+    }
+
+    &__icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__icon {
+        & span::before {
+            font-size: 20px;
+        }
+    }
+}
+
+//todo Copyright
+.copyright {
+    font-size: $f14;
+    line-height: $f16;
+    color: $grey 80;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0;
+    &__info {
+    }
+
+    &__made-by {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        & a {
+            margin: 0 5px;
+        }
+    }
+}
+
+//! hovers
+@media screen and (min-device-width: 768px) {
+    .footer-menu {
+        & a {
+            &:hover {
+                color: red;
+                text-decoration: underline;
+            }
+        }
+    }
+    .footer-contacts {
+        &__icon {
+            & span::before {
+                font-size: 20px;
+            }
+            & a:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

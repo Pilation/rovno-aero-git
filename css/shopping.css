@@ -145,6 +145,42 @@ a {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-parking:before {
+  content: "\e916";
+}
+
+.icon-ticket:before {
+  content: "\e917";
+}
+
+.icon-walking:before {
+  content: "\e918";
+}
+
+.icon-bed:before {
+  content: "\e911";
+}
+
+.icon-passport:before {
+  content: "\e912";
+}
+
+.icon-phone:before {
+  content: "\e913";
+}
+
+.icon-suitcase:before {
+  content: "\e914";
+}
+
+.icon-wifi:before {
+  content: "\e915";
+}
+
+.icon-tool:before {
+  content: "\e910";
+}
+
 .icon-info:before {
   content: "\e90e";
 }
@@ -228,33 +264,89 @@ span {
   width: fit-content;
 }
 
+main {
+  position: relative;
+  z-index: 1;
+}
+
 .container {
   max-width: 1184px;
   margin: 0 auto;
   padding: 0 7px;
 }
 
-.go-top-button {
-  position: fixed;
-  display: block;
-  bottom: 40px;
-  right: 25px;
-  z-index: 50;
-  width: 50px;
-  height: 50px;
-  background-color: #0b4d3c;
-  border-radius: 5px;
-  line-height: 50px;
-  text-align: center;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 22px;
-  color: #fff;
-  opacity: 0;
+.wrapper {
+  background-image: url(../img/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f1f4f6;
+  font-family: "Roboto", sans-serif;
 }
 
-.go-top-button.show {
-  opacity: 0.7;
+.breadcrumbs {
+  font-size: 0.8125rem;
+  line-height: 0.975rem;
+  color: #777;
+  margin-top: 140px;
+  padding: 40px 0;
+}
+
+.breadcrumbs__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.breadcrumbs__list a {
+  display: inline-block;
+  color: #222222;
+}
+
+.breadcrumbs__list span {
+  display: inline-block;
+}
+
+.breadcrumbs__list span::before {
+  font-size: 10px;
+  color: #222222;
+  margin: 0 10px;
+}
+
+.background {
+  width: 100%;
+  height: 485px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.background::after {
+  background: #22222299;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 24px;
 }
 
 .grey-button {
@@ -294,6 +386,59 @@ span {
   color: #222222;
 }
 
+.import {
+  background-color: #fff;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.under-construction {
+  padding: 32px;
+  border-radius: 4px;
+  margin: 14px 0;
+  background-color: #e5e8ee;
+  color: #22222280;
+  font-size: 0.975rem;
+  line-height: 1.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.go-top-button {
+  position: fixed;
+  display: block;
+  bottom: 40px;
+  right: 25px;
+  z-index: 50;
+  width: 50px;
+  height: 50px;
+  background-color: #0b4d3c;
+  border-radius: 5px;
+  line-height: 50px;
+  text-align: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  color: #fff;
+  opacity: 0;
+}
+
+.go-top-button.show {
+  opacity: 0.7;
+}
+
 header:hover:before {
   opacity: 1;
   visibility: visible;
@@ -306,7 +451,7 @@ header:before {
   height: 100%;
   position: fixed;
   left: 0;
-  top: 140px;
+  top: 0;
   background: rgba(0, 0, 0, 0.2);
   opacity: 0;
   visibility: hidden;
@@ -359,7 +504,7 @@ header:before {
 .header__border {
   height: 40px;
   width: 1px;
-  background-color: #eee;
+  background-color: #eeeeee4d;
 }
 
 .header__language {
@@ -367,13 +512,14 @@ header:before {
   margin-left: auto;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.75rem;
+  font-weight: bold;
   color: #fff;
 }
 
 .header__menu {
   height: 60px;
-  border-top: 1px solid #eeeeee80;
-  border-bottom: 1px solid #eeeeee80;
+  border-top: 1px solid #eeeeee4d;
+  border-bottom: 1px solid #eeeeee4d;
   font-weight: 400;
   line-height: 60px;
 }
@@ -418,6 +564,23 @@ header:before {
   opacity: 0.7;
 }
 
+.current {
+  position: relative;
+}
+
+.current::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 10;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 1px 1px 0 0;
+  background: #eeeeee;
+}
+
 .time-date {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -434,6 +597,10 @@ header:before {
 
 .time-date span:nth-child(1) {
   margin-right: 20px;
+}
+
+.header__item_dropdown:hover .header-dropdown {
+  visibility: visible;
 }
 
 .header-dropdown {
@@ -494,9 +661,41 @@ header:before {
   color: #777;
 }
 
-/* Show the dropdown menu on hover */
-.header__item_dropdown:hover .header-dropdown {
-  visibility: visible;
+@media (max-width: 1279px) {
+  .container {
+    max-width: 914px;
+  }
+}
+
+@media (max-width: 1921px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .container {
+    max-width: 1312px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .container {
+    max-width: 914px;
+  }
+}
+
+@media screen and (min-device-width: 768px) {
+  .header__link:hover {
+    opacity: 1;
+  }
+  .header-dropdown__link:hover {
+    color: red;
+    text-decoration: underline;
+  }
+  .header-dropdown__link_inactive {
+    pointer-events: none;
+  }
 }
 
 .pages-buttons__box {
@@ -722,115 +921,41 @@ header:before {
   margin: 0 5px;
 }
 
-.wrapper {
-  background-image: url(../img/background.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #f1f4f6;
-  font-family: "Roboto", sans-serif;
-}
-
-.current {
-  position: relative;
-}
-
-.current::before {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: 10;
-  bottom: 1px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  border-radius: 1px 1px 0 0;
-  background: #fff;
+@media screen and (min-device-width: 768px) {
+  .footer-menu a:hover {
+    color: red;
+    text-decoration: underline;
+  }
+  .footer-contacts__icon span::before {
+    font-size: 20px;
+  }
+  .footer-contacts__icon a:hover {
+    text-decoration: none;
+  }
 }
 
 .breadcrumbs {
-  font-size: 0.8125rem;
-  line-height: 0.975rem;
-  color: #fff;
-  margin-top: 140px;
-  padding: 40px 0;
-}
-
-.breadcrumbs__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.breadcrumbs__list a {
-  display: inline-block;
   color: #fff;
 }
 
-.breadcrumbs__list span {
-  display: inline-block;
+.breadcrumbs a {
+  color: #fff;
 }
 
-.breadcrumbs__list span::before {
-  font-size: 10px;
-  color: #222222;
-  margin: 0 10px;
-}
-
-.section-title {
-  font-size: 1.75rem;
-  color: #222;
-  font-weight: bold;
+.breadcrumbs span::before {
+  color: #fff;
 }
 
 .section-title {
   color: #fff;
-}
-
-.import {
-  background-color: #fff;
-  border-top: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
 }
 
 .background {
-  width: 100%;
-  height: 485px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 0;
   background-image: url(../img/shoppingBG.jpg);
-  background-size: 100% 100%;
-  background-size: cover;
-  background-position: center center;
-}
-
-.background::after {
-  background: #22222299;
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-main {
-  position: relative;
-  z-index: 1;
 }
 
 .shopping__box {
-  padding: 200px 0 120px 0;
+  padding: 180px 0 120px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

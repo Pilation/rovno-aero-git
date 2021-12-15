@@ -47,6 +47,36 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+.icon-parking:before {
+    content: "\e916";
+}
+.icon-ticket:before {
+    content: "\e917";
+}
+.icon-walking:before {
+    content: "\e918";
+}
+
+.icon-bed:before {
+    content: "\e911";
+}
+.icon-passport:before {
+    content: "\e912";
+}
+.icon-phone:before {
+    content: "\e913";
+}
+.icon-suitcase:before {
+    content: "\e914";
+}
+.icon-wifi:before {
+    content: "\e915";
+}
+
+.icon-tool:before {
+    content: "\e910";
+}
 .icon-info:before {
     content: "\e90e";
 }

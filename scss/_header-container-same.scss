@@ -1,0 +1,218 @@
+//todo Header
+header:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
+header:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    // top: 140px;
+    top: 0;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+.header {
+    width: 100%;
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    font-size: $f15;
+    color: #fff;
+    &__upper-box {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        height: 80px;
+        gap: 20px;
+
+        font-weight: 400;
+        line-height: 100%;
+    }
+
+    &__logo {
+        height: 40px;
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__border {
+        height: 40px;
+        width: 1px;
+        background-color: #eeeeee4d;
+    }
+    &__language {
+        cursor: pointer;
+        margin-left: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: $f12;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    &__menu {
+        height: 60px;
+        border-top: 1px solid #eeeeee4d;
+        border-bottom: 1px solid #eeeeee4d;
+        font-weight: 400;
+        line-height: 60px;
+
+        &.fixed {
+            background-color: #fff;
+            margin: 0 auto;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            height: 60px;
+            & .header__link {
+                color: $grey;
+                opacity: 0.7;
+            }
+            & .header-dropdown {
+                top: 60px;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        gap: 24px;
+    }
+
+    &__link {
+        color: #fff;
+        opacity: 0.7;
+    }
+}
+
+.current {
+    position: relative;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 10;
+        bottom: 1px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        border-radius: 1px 1px 0 0;
+        background: #eeeeee;
+    }
+}
+
+.time-date {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    & span:nth-child(1) {
+        margin-right: 20px;
+    }
+}
+
+//todo Show the dropdown menu on hover
+.header__item_dropdown:hover .header-dropdown {
+    visibility: visible;
+}
+
+.header-dropdown {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 140px;
+    width: 100%;
+    padding: 60px 0;
+    background-color: #fff;
+    height: fit-content;
+    visibility: hidden;
+    &.fixed {
+        position: fixed;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 14px;
+    }
+
+    &__list {
+        width: 25%;
+        min-width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 16px;
+    }
+
+    &__link {
+        line-height: normal;
+        font-size: $f15;
+        color: #444;
+        &_inactive {
+            color: #777;
+        }
+    }
+}
+
+//! media Container
+@media (max-width: 1279px) {
+    .container {
+        max-width: 914px;
+    }
+}
+@media (max-width: 1921px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+@media (max-width: 1600px) {
+    .container {
+        max-width: 1312px;
+    }
+}
+@media (max-width: 1279px) {
+    .container {
+        max-width: 914px;
+    }
+}
+
+//! hovers
+@media screen and (min-device-width: 768px) {
+    .header {
+        &__link:hover {
+            opacity: 1;
+        }
+    }
+    .header-dropdown {
+        &__link {
+            &:hover {
+                color: red;
+                text-decoration: underline;
+            }
+        }
+        &__link_inactive {
+            pointer-events: none;
+        }
+    }
+}
