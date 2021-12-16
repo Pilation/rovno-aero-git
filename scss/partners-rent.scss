@@ -11,7 +11,7 @@
 //! Color
 .wrapper {
     background-image: none;
-    background-color: #fff;
+    background-color: $white;
 }
 
 //! Unique
@@ -20,7 +20,7 @@
     & h2 {
         font-size: $f17;
         line-height: $f24;
-        color: #444;
+        color: $lightGrey;
         margin: 20px 0;
     }
     & h2 {

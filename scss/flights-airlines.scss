@@ -22,7 +22,7 @@
     &__left,
     &__right {
         flex: 1 1 49%;
-        min-width: 400px;
+        min-width: 350px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -33,9 +33,9 @@
 
     &__card {
         width: 100%;
-        background-color: #fff;
+        background-color: $white;
         border-radius: 10px;
-        min-width: 400px;
+        min-width: 350px;
     }
 
     &__header {
@@ -67,7 +67,7 @@
         width: 100%;
         font-size: $f15;
         padding: 16px 32px;
-        color: #777;
+        color: $veryLightGrey;
         & .icon-arrr {
             margin-left: 10px;
             display: inline-block;
@@ -119,12 +119,12 @@
         font-size: $f15;
         & span {
             margin-bottom: 5px;
-            color: #777;
+            color: $veryLightGrey;
         }
         & a {
             margin-bottom: 5px;
             text-decoration: underline;
-            color: #777;
+            color: $veryLightGrey;
         }
     }
     &__title {

@@ -41,8 +41,8 @@
     padding: 24px 32px;
     position: relative;
     flex: 1 1 100%;
-    background-color: #fff;
-    color: #fff;
+    background-color: $white;
+    color: $white;
     background-image: url(../img/News/news-card-main-BG.png);
     z-index: 0;
     border-radius: 4px;
@@ -126,7 +126,7 @@
         }
         & span::before {
             font-size: 20px;
-            color: #fff;
+            color: $white;
         }
     }
 }
@@ -136,7 +136,7 @@
     min-width: 280px;
     height: 170px;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: $white;
     font-size: $f16;
     line-height: $f18;
     color: $grey;
@@ -161,7 +161,7 @@
     }
 
     &__date {
-        color: #777;
+        color: $veryLightGrey;
         & span {
             display: inline-block;
             &::before {

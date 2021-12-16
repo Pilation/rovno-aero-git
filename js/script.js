@@ -1,9 +1,18 @@
-$(document).ready(function () {
-    $('.header__burger').click(function (event) {
-        $('.header__burger,.header-menu,.header__buttons,.header-above__menu,.main').toggleClass('active');
-        $('body').toggleClass('lock');
+const burger = document.querySelector(`.header__burger`);
+burger.onclick = () => {
+    let burgers = document.querySelectorAll('.header__burger, .header__menu, .main');
+    document.querySelector(`body`).classList.toggle(`lock`);
+    burgers.forEach(item => item.classList.toggle('active'));
+}
+
+
+jQuery(function ($) {
+    $('body').on('click', '.header__item_dropdown', function () {
+        $(this).toggleClass(`more`);
     });
+
 });
+
 
 $(window).scroll(function () {
     var scroll = $(window).scrollTop();

@@ -6,16 +6,16 @@
 
 //! Changed color
 .breadcrumbs {
-    color: #fff;
+    color: $white;
     & a {
-        color: #fff;
+        color: $white;
     }
     & span::before {
-        color: #fff;
+        color: $white;
     }
 }
 .section-title {
-    color: #fff;
+    color: $white;
 }
 //! Changed color
 
@@ -44,7 +44,7 @@
     justify-content: center;
     flex-wrap: wrap;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: $white;
     overflow: hidden;
 
     &__img {
@@ -65,7 +65,7 @@
         color: $grey;
         padding-bottom: 24px;
         & span {
-            color: #777;
+            color: $veryLightGrey;
             font-size: $f15;
             line-height: $f18;
         }
@@ -94,7 +94,7 @@
             margin-bottom: 10px;
         }
         & span {
-            color: #777;
+            color: $veryLightGrey;
         }
     }
 }

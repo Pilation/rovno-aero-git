@@ -10,7 +10,7 @@
         font-size: $f17;
         line-height: $f24;
         letter-spacing: 0.2px;
-        color: #444;
+        color: $lightGrey;
         max-width: 610px;
         margin: 24px 0;
     }
@@ -30,7 +30,7 @@
     flex: 1 1 48%;
     min-height: 165px;
     min-width: 350px;
-    background-color: #fff;
+    background-color: $white;
     border-radius: 4px;
     padding: 24px 0;
 
@@ -73,13 +73,13 @@
             margin: 8px 0;
         }
         & a {
-            color: #777;
+            color: $veryLightGrey;
             text-decoration: underline;
         }
     }
     &__schedule {
         text-decoration: none;
-        color: #777;
+        color: $veryLightGrey;
     }
 
     &__link {

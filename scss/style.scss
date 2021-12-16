@@ -8,16 +8,18 @@
 @import "_pages-buttons-footer.scss";
 
 .ready-pages {
+    border-radius: 4px;
+    border: 1px solid $rivne-red;
     display: block;
     position: fixed;
-    right: 50px;
-    top: 50px;
+    right: 25px;
+    top: 75px;
     width: fit-content;
     height: fit-content;
-    background-color: #fff;
+    background-color: $white;
     & a {
         color: #000;
-        padding: 5px 10px;
+        padding: 7px 10px;
     }
     z-index: 100500;
 }
@@ -55,10 +57,10 @@
     &__navigation {
         font-size: 0;
         position: absolute;
-        z-index: 1;
-        top: 50%;
+        z-index: 10;
         left: 50%;
-        transform: translateY(133px);
+        top: 50%;
+        transform: translate(-50%, calc(-50% + 125px));
 
         width: fit-content;
         display: flex;
@@ -88,16 +90,15 @@
 
     &__description {
         overflow: hidden;
-        height: 246px;
+        height: 250px;
         position: absolute;
-        z-index: 1;
         border-radius: 2px;
-        z-index: 100;
-        top: -200px;
+        z-index: 10;
+        max-width: 350px;
+        width: 100%;
         left: 50%;
         top: 50%;
-        transform: translateY(-123px);
-        width: 29%;
+        transform: translate(-50%, -50%);
     }
 
     &__tag {
@@ -105,12 +106,12 @@
         line-height: $f16;
         padding: 4px 12px;
         background-color: #ffffff4d;
-        color: #fff;
+        color: $white;
         margin-bottom: 25px;
     }
 
     &__link {
-        color: #fff;
+        color: $white;
         font-size: $f26;
         line-height: 2.5rem;
     }
@@ -135,7 +136,7 @@
     min-width: 280px;
     height: 170px;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: $white;
     font-size: $f16;
     line-height: $f18;
     color: $grey;
@@ -160,7 +161,7 @@
     }
 
     &__date {
-        color: #777;
+        color: $veryLightGrey;
         & span {
             display: inline-block;
             &::before {
@@ -196,7 +197,7 @@
         }
         & span::before {
             font-size: 20px;
-            color: #fff;
+            color: $white;
         }
     }
 }
@@ -219,7 +220,7 @@
     }
 
     &__link-outside {
-        border: 2px solid #fff;
+        border: 2px solid $white;
         flex: 1 1 23%;
         height: 145px;
         min-width: 290px;

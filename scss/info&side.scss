@@ -11,7 +11,7 @@
 //! Color
 .wrapper {
     background-image: none;
-    background-color: #fff;
+    background-color: $white;
 }
 
 //! Unique
@@ -26,7 +26,6 @@
     flex: 1 1 15%;
     align-self: flex-start;
     min-width: 250px;
-    width: 250px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -68,7 +67,7 @@
     }
 
     &__ancor {
-        color: #777;
+        color: $veryLightGrey;
         font-size: $f15;
         line-height: $f16;
     }
@@ -114,10 +113,9 @@
     min-width: 350px;
 }
 .article {
-    color: #444;
+    color: $lightGrey;
     font-size: $f17;
     line-height: $f18;
-    // margin: 0 auto 65px auto;
     margin-bottom: 65px;
     hyphens: auto;
     width: 90%;
@@ -159,6 +157,14 @@
         }
     }
     & a {
-        color: #444;
+        color: $lightGrey;
+    }
+}
+
+@media (max-width: 1024px) {
+    .side-menu {
+        position: relative;
+        top: 0;
+        left: 0;
     }
 }

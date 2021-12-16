@@ -6,16 +6,16 @@
 
 //! Changed color
 .breadcrumbs {
-    color: #fff;
+    color: $white;
     & a {
-        color: #fff;
+        color: $white;
     }
     & span::before {
-        color: #fff;
+        color: $white;
     }
 }
 .section-title {
-    color: #fff;
+    color: $white;
 }
 .wrapper {
     background-image: none;
@@ -29,7 +29,7 @@
 
 .contacts {
     &__description {
-        color: #fff;
+        color: $white;
         font-size: $f17;
         line-height: $f24;
         max-width: 610px;
@@ -67,14 +67,14 @@
         & p {
             font-size: $f17;
             line-height: $f24;
-            color: #444;
+            color: $lightGrey;
             margin: 20px 0;
         }
     }
 }
 
 .info-form {
-    background-color: #fff;
+    background-color: $white;
     padding: 24px;
 }
 

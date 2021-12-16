@@ -11,7 +11,7 @@
 //! Color
 .wrapper {
     background-image: none;
-    background-color: #fff;
+    background-color: $white;
 }
 
 //! Unique
@@ -19,7 +19,7 @@
     min-width: 280px;
     height: 170px;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: $white;
     font-size: $f16;
     line-height: $f18;
     color: $grey;
@@ -43,7 +43,7 @@
     }
 
     &__date {
-        color: #777;
+        color: $veryLightGrey;
         & span {
             display: inline-block;
             &::before {
@@ -58,7 +58,7 @@
         position: relative;
         width: 100%;
         height: 550px;
-        background-color: #fff;
+        background-color: $white;
         background-image: url(../img/News/news-card-main-BG.png);
         z-index: 0;
         border-radius: 4px;
@@ -76,7 +76,7 @@
     }
 
     &__card {
-        background-color: #fff;
+        background-color: $white;
         border-radius: 4px;
         position: absolute;
         left: 50%;
@@ -101,7 +101,7 @@
     &__main {
         font-size: $f17;
         line-height: $f24;
-        color: #444;
+        color: $lightGrey;
         margin: 0 auto;
         max-width: 570px;
         & h2 {
@@ -126,7 +126,7 @@
         text-align: center;
         text-transform: uppercase;
         font-weight: bold;
-        color: #777;
+        color: $veryLightGrey;
         padding-bottom: 32px;
     }
 }

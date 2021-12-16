@@ -14,8 +14,14 @@
     & p {
         font-size: $f17;
         line-height: $f24;
-        color: #444;
+        color: $lightGrey;
         max-width: 500px;
         margin: 24px 0;
+    }
+    iframe {
+        width: 100%;
+        height: 450px;
+        border: 2px solid #eee;
+        border-radius: 4px;
     }
 }
