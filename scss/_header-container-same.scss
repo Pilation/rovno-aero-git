@@ -274,7 +274,7 @@
                 content: "";
                 position: absolute;
                 right: 10px;
-                top: 25px;
+                top: 17px;
                 border: 7px solid transparent;
                 border-left: 7px solid $grey;
                 transform-origin: center;
@@ -396,19 +396,18 @@
 
 //! Shadow & Hover-menu & Scroll
 @media (min-width: 1024px) {
-    header:hover:before {
+    .header:hover:before {
         opacity: 1;
         visibility: visible;
     }
-    header:before {
+    .header:before {
         content: "";
         display: block;
         width: 100%;
-        height: 100%;
-        position: fixed;
+        height: 100vh;
+        position: absolute;
         left: 0;
-        // top: 140px;
-        top: 0;
+        top: 140px;
         background: rgba(0, 0, 0, 0.2);
         opacity: 0;
         visibility: hidden;
@@ -417,6 +416,10 @@
         -webkit-transition: all 0.3s;
         transition: all 0.3s;
         pointer-events: none;
+    }
+    .header.fixed:before {
+        position: fixed;
+        top: 60px;
     }
     //todo Show the dropdown menu on hover
     .header__item_dropdown:hover .header-dropdown {

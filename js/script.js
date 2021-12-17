@@ -17,9 +17,9 @@ jQuery(function ($) {
 $(window).scroll(function () {
     var scroll = $(window).scrollTop();
     if (scroll >= 80) {
-        $(".header__menu, .header-dropdown").addClass("fixed");
+        $(".header__menu, .header-dropdown, .header").addClass("fixed");
     } else {
-        $(".header__menu, .header-dropdown").removeClass("fixed");
+        $(".header__menu, .header-dropdown, .header").removeClass("fixed");
     }
 });
 
