@@ -1822,3 +1822,95 @@ main {
   -o-object-position: center center;
      object-position: center center;
 }
+
+.test__box {
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #777;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+}
+
+.test__item {
+  color: #fff;
+  width: calc(100% / 3);
+  padding: 400px 30px 30px;
+  height: 660px;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+}
+
+.test__item.off {
+  z-index: 5;
+}
+
+.test__item.off .test__img {
+  opacity: 0;
+}
+
+.test__item.off .test__description {
+  opacity: 0.7;
+}
+
+.test__item:nth-child(2) .test__img {
+  background-image: url(../img/restaurants-bg.jpg);
+  left: -100%;
+}
+
+.test__item:nth-child(3) .test__img {
+  background-image: url(../img/VIP-services-bg.jpg);
+  left: -200%;
+}
+
+.test__item:hover {
+  overflow: visible;
+}
+
+.test__img {
+  background-image: url(../img/shoppingBG.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 100%;
+}
+
+.test__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left top;
+     object-position: left top;
+}
+
+.test__description {
+  position: relative;
+  z-index: 1;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.test__title {
+  width: 100%;
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.test__text {
+  margin: 20px 0;
+  font-size: 1.0625rem;
+  text-align: center;
+}

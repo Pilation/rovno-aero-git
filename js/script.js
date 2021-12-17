@@ -1,9 +1,31 @@
-const burger = document.querySelector(`.header__burger`);
-burger.onclick = () => {
-    let burgers = document.querySelectorAll('.header__burger, .header__menu, .main');
-    document.querySelector(`body`).classList.toggle(`lock`);
-    burgers.forEach(item => item.classList.toggle('active'));
+// const burger = document.querySelector(`.header__burger`);
+// burger.onclick = () => {
+//     let burgers = document.querySelectorAll('.header__burger, .header__menu, .main');
+//     document.querySelector(`body`).classList.toggle(`lock`);
+//     burgers.forEach(item => item.classList.toggle('active'));
+// }
+
+const sidehovers = document.querySelectorAll(`.test__item`);
+console.log(sidehovers)
+
+sidehovers.forEach(function (item) {
+    item.onmouseover = () => {
+        sidehovers.forEach(item => item.classList.add(`off`));
+        item.classList.remove(`off`);
+    }
+});
+document.querySelector(`.test__box`).onmouseout = () => {
+    sidehovers.forEach(item => item.classList.remove(`off`));
 }
+
+
+// block.onclick = () => {
+//   if(window.innerWidth <= MOBILE){
+//     console.log('mobile func');
+//   } else{
+//     console.log('desktop func');
+//   }
+// }
 
 
 jQuery(function ($) {
