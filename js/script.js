@@ -55,19 +55,19 @@ if (window.screen.width > 1024) {
     document.querySelectorAll(`.switch-item`).forEach(item => item.classList.replace(`slider-link`, `hover-link`));
 }
 
-let actualDocWidth;
-window.onresize = () => {
-    actualDocWidth = window.screen.width;
-    if (actualDocWidth < 1024) {
-        document.querySelector(`.switch-container`).classList.replace(`hover-box`, `slider-box`);
-        document.querySelectorAll(`.switch-item`).forEach(item => item.classList.replace(`hover-link`, `slider-link`));
-    }
-    if (actualDocWidth > 1024) {
-        console.log(actualDocWidth)
-        document.querySelector(`.switch-container`).classList.replace(`slider-box`, `hover-box`);
-        document.querySelectorAll(`.switch-item`).forEach(item => item.classList.replace(`slider-link`, `hover-link`));
-    }
-}
+// let actualDocWidth;
+// window.onresize = () => {
+//     actualDocWidth = window.screen.width;
+//     if (actualDocWidth < 1024) {
+//         document.querySelector(`.switch-container`).classList.replace(`hover-box`, `slider-box`);
+//         document.querySelectorAll(`.switch-item`).forEach(item => item.classList.replace(`hover-link`, `slider-link`));
+//     }
+//     if (actualDocWidth > 1024) {
+//         console.log(actualDocWidth)
+//         document.querySelector(`.switch-container`).classList.replace(`slider-box`, `hover-box`);
+//         document.querySelectorAll(`.switch-item`).forEach(item => item.classList.replace(`slider-link`, `hover-link`));
+//     }
+// }
 
 //todo Hover-Slider ends
 
