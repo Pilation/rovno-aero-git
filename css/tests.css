@@ -448,6 +448,29 @@ a {
   opacity: 1;
 }
 
+.slider-box .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  z-index: 5;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -929,11 +952,39 @@ main {
   font-weight: bold;
   font-size: 22px;
   color: #fff;
-  opacity: 1;
+  opacity: 0.1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.go-top-button::before {
+  content: "";
+  position: absolute;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+          transform: translate(-50%, -50%) rotate(-90deg);
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  -webkit-mask-image: url(../img/go-top-plane.svg);
+          mask-image: url(../img/go-top-plane.svg);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: 40px 40px;
+          mask-size: 40px 40px;
 }
 
 .go-top-button.show {
-  opacity: 0.7;
+  opacity: 0.6;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.go-top-button:hover {
+  opacity: 1;
 }
 
 @media (max-width: 1600px) {
@@ -1279,6 +1330,7 @@ main {
   .header__link {
     color: #222;
     opacity: 0.7;
+    width: 100%;
   }
   .header__item_dropdown {
     position: relative;
@@ -1287,11 +1339,11 @@ main {
     content: "";
     position: absolute;
     right: 10px;
-    top: 17px;
+    top: 18px;
     border: 7px solid transparent;
     border-left: 7px solid #222;
-    -webkit-transform-origin: center;
-            transform-origin: center;
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
   }
@@ -1461,11 +1513,14 @@ main {
   }
 }
 
-.pages-buttons__box {
+.hover-links {
   padding: 24px 0;
 }
 
-.pages-buttons__list {
+.hover-links__box {
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #777;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1473,66 +1528,297 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 14px;
+  position: relative;
 }
 
-.pages-buttons__link {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 23%;
-          flex: 1 1 23%;
-  min-width: 210px;
-  height: 140px;
+.hover-links__link {
+  width: 100%;
+  color: #fff;
+  width: calc(100% / 3);
+  padding: 250px 30px 30px;
+  height: 400px;
   position: relative;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+}
+
+.hover-links__link.off {
+  z-index: 4;
+}
+
+.hover-links__link.off .hover-links__img {
+  opacity: 0;
+}
+
+.hover-links__link.off .hover-links__description {
+  opacity: 0.6;
+}
+
+.hover-links__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   border-radius: 4px;
-  overflow: hidden;
+  z-index: 1;
+  background-color: #000;
+  opacity: 0.4;
 }
 
-.pages-buttons__link::before {
+.hover-links__link::before {
   content: "";
   position: absolute;
   top: 8px;
   right: 8px;
-  border: 6px solid transparent;
-  border-top: 6px solid #fff;
-  border-right: 6px solid #fff;
+  border: 12px solid transparent;
+  border-top: 12px solid #fff;
+  border-right: 12px solid #fff;
   opacity: 0.45;
+  z-index: 3;
 }
 
-.pages-buttons__picture {
+.hover-links__link:nth-child(2) .hover-links__img {
+  background-image: url(../img/restaurants-bg.jpg);
+  left: -100%;
+}
+
+.hover-links__link:nth-child(3) .hover-links__img {
+  background-image: url(../img/VIP-services-bg.jpg);
+  left: -200%;
+}
+
+.hover-links__link:hover {
+  overflow: visible;
+}
+
+.hover-links__img {
+  background-image: url(../img/shoppingBG.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 100%;
+}
+
+.hover-links__description {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  z-index: 2;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.hover-links__description span {
+  font-size: 1.75rem;
+}
+
+.hover-links__title {
+  width: 100%;
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.hover-slider {
+  margin-top: 80px;
+}
+
+.hover-slider__description {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  z-index: 2;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.hover-slider__description span {
+  font-size: 1.75rem;
+}
+
+.hover-slider__title {
+  width: 100%;
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.hover-slider__img {
+  background-image: url(../img/shoppingBG.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 100%;
+}
+
+.hover-box {
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #777;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+}
+
+.hover-link {
+  color: #fff;
+  width: calc(100% / 3);
+  padding: 250px 30px 30px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+}
+
+.hover-link.off {
+  z-index: 4;
+}
+
+.hover-link.off .hover-slider__img {
+  opacity: 0;
+}
+
+.hover-link.off .hover-slider__description {
+  opacity: 0.6;
+}
+
+.hover-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  border-radius: 4px;
+  z-index: 1;
+  background-color: #000;
+  opacity: 0.4;
 }
 
-.pages-buttons__description {
+.hover-link::before {
+  content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  top: 8px;
+  right: 8px;
+  border: 12px solid transparent;
+  border-top: 12px solid #fff;
+  border-right: 12px solid #fff;
+  opacity: 0.45;
+  z-index: 3;
 }
 
-.pages-buttons__description span::before {
-  color: #fff;
-  font-size: 20px;
+.hover-link:nth-child(2) .hover-slider__img {
+  background-image: url(../img/restaurants-bg.jpg);
+  left: -100%;
 }
 
-.pages-buttons__title {
-  margin-top: 16px;
-  font-size: 1.125rem;
-  line-height: 1.5rem;
+.hover-link:nth-child(3) .hover-slider__img {
+  background-image: url(../img/VIP-services-bg.jpg);
+  left: -200%;
+}
+
+.hover-link:hover {
+  overflow: visible;
+}
+
+.slider-box {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.slider-link {
+  width: 100%;
   color: #fff;
+  height: 400px;
+  padding: 250px 30px 30px;
+  position: relative;
+  z-index: 3;
+}
+
+.slider-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  z-index: 1;
+  background-color: #000;
+  opacity: 0.4;
+}
+
+.slider-link::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: 12px solid transparent;
+  border-top: 12px solid #fff;
+  border-right: 12px solid #fff;
+  opacity: 0.45;
+  z-index: 3;
+}
+
+.slider-link .hover-slider__img {
+  background-image: url(../img/shoppingBG.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-link:nth-child(2) .hover-slider__img {
+  background-image: url(../img/restaurants-bg.jpg);
+}
+
+.slider-link:nth-child(3) .hover-slider__img {
+  background-image: url(../img/VIP-services-bg.jpg);
 }
 
 .footer {
@@ -1697,6 +1983,111 @@ main {
   }
 }
 
+.header {
+  color: #222;
+}
+
+.header__border {
+  height: 40px;
+  width: 1px;
+  background-color: #eeeeee4d;
+}
+
+.header__language {
+  color: #222;
+}
+
+.header__menu {
+  border-top: 1px solid #eeeeee4d;
+  border-bottom: 1px solid #eeeeee4d;
+}
+
+.header__menu.fixed {
+  background-color: #fff;
+}
+
+.header__link {
+  color: #222;
+}
+
+.current::before {
+  background: #222;
+}
+
+.pages-buttons__box {
+  padding: 24px 0;
+}
+
+.pages-buttons__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 14px;
+}
+
+.pages-buttons__link {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 23%;
+          flex: 1 1 23%;
+  min-width: 210px;
+  height: 140px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.pages-buttons__link::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: 6px solid transparent;
+  border-top: 6px solid #fff;
+  border-right: 6px solid #fff;
+  opacity: 0.45;
+}
+
+.pages-buttons__picture {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.pages-buttons__description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.pages-buttons__description span::before {
+  color: #fff;
+  font-size: 20px;
+}
+
+.pages-buttons__title {
+  margin-top: 16px;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  color: #fff;
+}
+
 .news__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1783,47 +2174,11 @@ main {
   min-height: 47px;
 }
 
-.advertisement__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 14px;
+.hover-links {
+  margin-top: 200px;
 }
 
-.advertisement__link-outside {
-  border: 2px solid #fff;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 23%;
-          flex: 1 1 23%;
-  height: 145px;
-  min-width: 290px;
-  height: 170px;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.advertisement__picture {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center center;
-     object-position: center center;
-}
-
-.test__box {
+.hover-links__box {
   border-radius: 4px;
   overflow: hidden;
   background-color: #777;
@@ -1837,44 +2192,57 @@ main {
   position: relative;
 }
 
-.test__item {
+.hover-links__link {
+  width: 100%;
   color: #fff;
   width: calc(100% / 3);
-  padding: 400px 30px 30px;
-  height: 660px;
+  padding: 300px 30px 30px;
+  height: 500px;
   position: relative;
   overflow: hidden;
   position: relative;
   z-index: 3;
 }
 
-.test__item.off {
-  z-index: 5;
+.hover-links__link.off {
+  z-index: 4;
 }
 
-.test__item.off .test__img {
+.hover-links__link.off .hover-links__img {
   opacity: 0;
 }
 
-.test__item.off .test__description {
+.hover-links__link.off .hover-links__description {
   opacity: 0.7;
 }
 
-.test__item:nth-child(2) .test__img {
+.hover-links__link::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: 12px solid transparent;
+  border-top: 12px solid #fff;
+  border-right: 12px solid #fff;
+  opacity: 0.45;
+  z-index: 3;
+}
+
+.hover-links__link:nth-child(2) .hover-links__img {
   background-image: url(../img/restaurants-bg.jpg);
   left: -100%;
 }
 
-.test__item:nth-child(3) .test__img {
+.hover-links__link:nth-child(3) .hover-links__img {
   background-image: url(../img/VIP-services-bg.jpg);
   left: -200%;
 }
 
-.test__item:hover {
+.hover-links__link:hover {
   overflow: visible;
 }
 
-.test__img {
+.hover-links__img {
   background-image: url(../img/shoppingBG.jpg);
   background-size: cover;
   background-position: center;
@@ -1888,29 +2256,31 @@ main {
   height: 100%;
 }
 
-.test__img img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: left top;
-     object-position: left top;
-}
-
-.test__description {
+.hover-links__description {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
   z-index: 1;
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
 
-.test__title {
+.hover-links__description span {
+  font-size: 1.75rem;
+}
+
+.hover-links__title {
   width: 100%;
   font-size: 1.75rem;
   font-weight: bold;
-  text-align: center;
-}
-
-.test__text {
-  margin: 20px 0;
-  font-size: 1.0625rem;
   text-align: center;
 }

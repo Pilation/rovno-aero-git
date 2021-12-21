@@ -6,8 +6,71 @@
 @import "_main-same.scss";
 @import "_header-container-same.scss";
 @import "_pages-buttons-footer.scss";
+@import "_header-dark.scss";
+
+//todo Pages buttons
+.pages-buttons {
+    &__box {
+        padding: 24px 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    &__link {
+        flex: 1 1 23%;
+        min-width: 210px;
+        height: 140px;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+        overflow: hidden;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            border: 6px solid transparent;
+            border-top: 6px solid #fff;
+            border-right: 6px solid #fff;
+            opacity: 0.45;
+        }
+    }
+
+    &__picture {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__description {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        & span::before {
+            color: #fff;
+            font-size: 20px;
+        }
+    }
+
+    &__title {
+        margin-top: 16px;
+        font-size: $f18;
+        line-height: 1.5rem;
+        color: #fff;
+    }
+}
 
 //todo News
+
 .news {
     &__box {
     }
@@ -71,42 +134,8 @@
     }
 }
 
-//todo Advertisement
-.advertisement {
-    &__box {
-    }
-
-    &__description {
-    }
-
-    &__list {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 14px;
-    }
-
-    &__link-outside {
-        border: 2px solid $white;
-        flex: 1 1 23%;
-        height: 145px;
-        min-width: 290px;
-        height: 170px;
-        border-radius: 4px;
-        overflow: hidden;
-    }
-
-    &__picture {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center center;
-    }
-}
-
-.test {
+.hover-links {
+    margin-top: 200px;
     &__box {
         border-radius: 4px;
         overflow: hidden;
@@ -116,32 +145,44 @@
         position: relative;
     }
 
-    &__item {
+    &__link {
+        width: 100%;
         color: $white;
         &.off {
-            z-index: 5;
-            .test__img {
+            z-index: 4;
+            .hover-links__img {
                 opacity: 0;
             }
-            .test__description {
+            .hover-links__description {
                 opacity: 0.7;
             }
         }
         width: calc(100% / 3);
-        padding: 400px 30px 30px;
-        height: 660px;
+        padding: 300px 30px 30px;
+        height: 500px;
         position: relative;
         overflow: hidden;
         position: relative;
         z-index: 3;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            border: 12px solid transparent;
+            border-top: 12px solid #fff;
+            border-right: 12px solid #fff;
+            opacity: 0.45;
+            z-index: 3;
+        }
         &:nth-child(2) {
-            & .test__img {
+            & .hover-links__img {
                 background-image: url(../img/restaurants-bg.jpg);
                 left: -100%;
             }
         }
         &:nth-child(3) {
-            & .test__img {
+            & .hover-links__img {
                 background-image: url(../img/VIP-services-bg.jpg);
                 left: -200%;
             }
@@ -152,10 +193,6 @@
     }
 
     &__img {
-        & img {
-            object-fit: cover;
-            object-position: left top;
-        }
         background-image: url(../img/shoppingBG.jpg);
         background-size: cover;
         background-position: center;
@@ -170,8 +207,15 @@
 
     &__description {
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
         z-index: 1;
         transition: opacity 0.5s ease;
+        & span {
+            font-size: $f28;
+        }
     }
 
     &__title {
@@ -180,12 +224,96 @@
         font-weight: bold;
         text-align: center;
     }
-
-    &__text {
-        margin: 20px 0;
-        font-size: $f17;
-        text-align: center;
-    }
 }
+.container {
+}
+.icon-shopping {
+}
+.icon-restaurants {
+}
+.icon-couch {
+}
+
+// .test {
+//     &__box {
+//         border-radius: 4px;
+//         overflow: hidden;
+//         background-color: $veryLightGrey;
+//         display: flex;
+//         flex-direction: row;
+//         position: relative;
+//     }
+
+//     &__item {
+//         color: $white;
+//         &.off {
+//             z-index: 5;
+//             .test__img {
+//                 opacity: 0;
+//             }
+//             .test__description {
+//                 opacity: 0.7;
+//             }
+//         }
+//         width: calc(100% / 3);
+//         padding: 400px 30px 30px;
+//         height: 660px;
+//         position: relative;
+//         overflow: hidden;
+//         position: relative;
+//         z-index: 3;
+//         &:nth-child(2) {
+//             & .test__img {
+//                 background-image: url(../img/restaurants-bg.jpg);
+//                 left: -100%;
+//             }
+//         }
+//         &:nth-child(3) {
+//             & .test__img {
+//                 background-image: url(../img/VIP-services-bg.jpg);
+//                 left: -200%;
+//             }
+//         }
+//         &:hover {
+//             overflow: visible;
+//         }
+//     }
+
+//     &__img {
+//         & img {
+//             object-fit: cover;
+//             object-position: left top;
+//         }
+//         background-image: url(../img/shoppingBG.jpg);
+//         background-size: cover;
+//         background-position: center;
+//         z-index: 1;
+//         transition: opacity 0.5s ease;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         width: 300%;
+//         height: 100%;
+//     }
+
+//     &__description {
+//         position: relative;
+//         z-index: 1;
+//         transition: opacity 0.5s ease;
+//     }
+
+//     &__title {
+//         width: 100%;
+//         font-size: $f28;
+//         font-weight: bold;
+//         text-align: center;
+//     }
+
+//     &__text {
+//         margin: 20px 0;
+//         font-size: $f17;
+//         text-align: center;
+//     }
+// }
 .container {
 }

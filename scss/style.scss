@@ -215,3 +215,27 @@
         object-position: center center;
     }
 }
+
+@media (max-width: 1024px) {
+    .header-slider {
+        &__navigation {
+            transform: translate(-50%, calc(-50% + 240px));
+        }
+
+        &__description {
+            overflow: hidden;
+            height: 250px;
+            position: absolute;
+            border-radius: 2px;
+            z-index: 10;
+            max-width: 350px;
+            width: 100%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, calc(-50% + 115px));
+        }
+        &__arrows {
+            display: none;
+        }
+    }
+}
