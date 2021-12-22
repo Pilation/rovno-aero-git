@@ -1,5 +1,8 @@
 @import "_null.scss";
 @import "_fonts.scss";
+@import "_slick-theme.scss";
+@import "_slick.scss";
+@import "_sliders.scss";
 @import "_main-same.scss";
 @import "_header-container-same.scss";
 @import "_pages-buttons-footer.scss";
@@ -29,7 +32,7 @@
         font-size: $f17;
         line-height: $f24;
         max-width: 610px;
-        padding-bottom: 120px;
+        padding-bottom: 24px;
     }
 
     &__small-title {
@@ -40,6 +43,7 @@
     }
 
     &__header {
+        margin-top: 14px;
         width: 100%;
         background-color: $white;
         border-radius: 4px;
@@ -165,4 +169,12 @@
 .red-button {
     width: 100%;
     margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+    .vip-terminal {
+        &__description {
+            padding-bottom: 115px;
+        }
+    }
 }

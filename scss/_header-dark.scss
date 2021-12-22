@@ -1,5 +1,10 @@
 .header {
     color: $grey;
+    backdrop-filter: none;
+
+    &__logo {
+        background-image: url(../img/logo-rivne-black.svg);
+    }
 
     &__language {
         color: $grey;

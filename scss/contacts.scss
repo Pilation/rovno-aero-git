@@ -1,8 +1,12 @@
 @import "_null.scss";
 @import "_fonts.scss";
+@import "_slick-theme.scss";
+@import "_slick.scss";
+@import "_sliders.scss";
 @import "_main-same.scss";
 @import "_header-container-same.scss";
 @import "_pages-buttons-footer.scss";
+@import "_popup.scss";
 
 //! Changed color
 .breadcrumbs {
@@ -33,10 +37,10 @@
         font-size: $f17;
         line-height: $f24;
         max-width: 610px;
-        padding-bottom: 120px;
+        padding-bottom: 50px;
     }
     &__box {
-        margin-top: 90px;
+        margin-top: 14px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -84,4 +88,12 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 14px;
+}
+
+@media (max-width: 1024px) {
+    .contacts {
+        &__description {
+            padding-bottom: 140px;
+        }
+    }
 }

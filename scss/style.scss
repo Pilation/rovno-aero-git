@@ -6,6 +6,7 @@
 @import "_main-same.scss";
 @import "_header-container-same.scss";
 @import "_pages-buttons-footer.scss";
+@import "_popup.scss";
 
 .ready-pages {
     border-radius: 4px;
@@ -26,6 +27,7 @@
 
 //! Unique
 //todo Header-slider
+
 .header-slider {
     position: relative;
     width: 100%;
@@ -60,7 +62,7 @@
         z-index: 10;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, calc(-50% + 150px));
+        transform: translate(-50%, calc(-50% + 240px));
 
         width: fit-content;
         display: flex;
@@ -98,7 +100,7 @@
         width: 100%;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, calc(-50% + 115px));
     }
 
     &__tag {
@@ -217,26 +219,8 @@
 }
 
 @media (max-width: 1024px) {
-    .header-slider {
-        &__navigation {
-            transform: translate(-50%, calc(-50% + 240px));
-        }
-
-        &__description {
-            overflow: hidden;
-            height: 250px;
-            position: absolute;
-            border-radius: 2px;
-            z-index: 10;
-            max-width: 350px;
-            width: 100%;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, calc(-50% + 115px));
-        }
-        &__arrows {
-            display: none;
-        }
+    &__arrows {
+        display: none;
     }
 }
 

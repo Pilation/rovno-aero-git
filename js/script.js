@@ -1,4 +1,3 @@
-
 //todo Header Starts 
 
 const burger = document.querySelector(`.header__burger`);
@@ -15,6 +14,50 @@ jQuery(function ($) {
     });
 
 });
+// //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// var lastScrollTop = 0;
+// let element;
+// // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+// element.addEventListener("scroll", function () { // or window.addEventListener("scroll"....
+//     var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+//     if (st > lastScrollTop) {
+//         // downscroll code
+//     } else {
+//         // upscroll code
+//     }
+//     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+// }, false);
+// //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// let didScroll;
+// let lastScrollTop = 0;
+// let delta = 80;
+// let navbarHeight = $('header').outerHeight();
+
+// $(window).scroll(() => didScroll = true);
+
+// setInterval(() => didScroll ? (hasScrolled(), didScroll = false) : ``, 250);
+
+// function hasScrolled() {
+//     let st = $(this).scrollTop();
+
+//     // Make sure they scroll more than delta
+//     if (Math.abs(lastScrollTop - st) <= delta)
+//         return;
+
+//     // If they scrolled down and are past the navbar, add class .nav-up.
+//     // This is necessary so you never see what is "behind" the navbar.
+//     if (st > lastScrollTop && st > navbarHeight) {
+//         // Scroll Down
+//         $('header').removeClass('nav-down').addClass('nav-up');
+//     } else {
+//         // Scroll Up
+//         if (st + $(window).height() < $(document).height()) {
+//             $('header').removeClass('nav-up').addClass('nav-down');
+//         }
+//     }
+//     lastScrollTop = st;
+// }
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
 
 $(window).scroll(function () {
     var scroll = $(window).scrollTop();
@@ -29,7 +72,6 @@ $(window).scroll(function () {
 
 
 //todo Hover-Slider starts
-
 const sidehovers = document.querySelectorAll(`.hover-link`);
 const testbox = document.querySelector(`.hover-box`);
 
@@ -44,30 +86,28 @@ testbox.onmouseout = () => {
     sidehovers.forEach(item => item.classList.remove(`off`));
 }
 
-
-
-if (window.screen.width < 1024) {
+if (window.innerWidth < 1024) {
     document.querySelector(`.switch-container`).classList.replace(`hover-box`, `slider-box`);
     document.querySelectorAll(`.switch-item`).forEach(item => item.classList.replace(`hover-link`, `slider-link`));
 }
-if (window.screen.width > 1024) {
+if (window.innerWidth > 1024) {
     document.querySelector(`.switch-container`).classList.replace(`slider-box`, `hover-box`);
     document.querySelectorAll(`.switch-item`).forEach(item => item.classList.replace(`slider-link`, `hover-link`));
 }
 
-// let actualDocWidth;
-// window.onresize = () => {
-//     actualDocWidth = window.screen.width;
-//     if (actualDocWidth < 1024) {
-//         document.querySelector(`.switch-container`).classList.replace(`hover-box`, `slider-box`);
-//         document.querySelectorAll(`.switch-item`).forEach(item => item.classList.replace(`hover-link`, `slider-link`));
-//     }
-//     if (actualDocWidth > 1024) {
-//         console.log(actualDocWidth)
-//         document.querySelector(`.switch-container`).classList.replace(`slider-box`, `hover-box`);
-//         document.querySelectorAll(`.switch-item`).forEach(item => item.classList.replace(`slider-link`, `hover-link`));
-//     }
-// }
+let actualDocWidth;
+window.onresize = () => {
+    actualDocWidth = window.innerWidth;
+    if (actualDocWidth < 1024) {
+        document.querySelector(`.switch-container`).classList.replace(`hover-box`, `slider-box`);
+        document.querySelectorAll(`.switch-item`).forEach(item => item.classList.replace(`hover-link`, `slider-link`));
+    }
+    if (actualDocWidth > 1024) {
+        console.log(actualDocWidth)
+        document.querySelector(`.switch-container`).classList.replace(`slider-box`, `hover-box`);
+        document.querySelectorAll(`.switch-item`).forEach(item => item.classList.replace(`slider-link`, `hover-link`));
+    }
+}
 
 //todo Hover-Slider ends
 

@@ -81,7 +81,8 @@ main {
 
 .background {
     width: 100%;
-    height: 485px;
+    // height: 485px;
+    height: 385px;
     position: absolute;
     left: 0;
     top: 0;
@@ -448,6 +449,6 @@ main {
 }
 @media (max-width: 1024px) {
     .breadcrumbs {
-        margin-top: 80px;
+        margin-top: 50px;
     }
 }

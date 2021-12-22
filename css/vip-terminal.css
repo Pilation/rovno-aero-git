@@ -245,6 +245,232 @@ a {
   content: "\e90d";
 }
 
+/* Slider */
+.slick-loading .slick-list {
+  background: #fff url("./ajax-loader.gif") center center no-repeat;
+}
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url("./fonts/slick.eot");
+  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Arrows */
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* Слайдер */
+/* Слайдер запущен */
+/* Слайдер с точками */
+/* Ограничивающая оболочка */
+/* Лента слайдов */
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Слайд */
+/* Слайд активный (показывается) */
+/* Слайд основной */
+/* Слайд по центру */
+/* Клонированный слайд */
+/* Стрелка */
+.slick-arrow {
+  width: 32px;
+  height: 32px;
+  font-size: 0;
+  background-color: #22222299;
+  border-radius: 4px;
+}
+
+.slick-arrow.slick-prev,
+.slick-arrow.slick-next {
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Стрелка влево */
+.slick-arrow.slick-prev:before {
+  content: "\e902";
+  font-size: 17px;
+}
+
+/* Стрелка вправо */
+.slick-arrow.slick-next:before {
+  content: "\e903";
+  font-size: 17px;
+}
+
+/* Стрелка не активная */
+/* Точки (булиты) */
+.slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+
+/* Активная точка */
+/* Элемент точки */
+.slick-dots li button {
+  font-size: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #000;
+  opacity: 0.4;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #fff;
+  opacity: 1;
+}
+
+.slider-box .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  z-index: 5;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -321,7 +547,7 @@ main {
 
 .background {
   width: 100%;
-  height: 485px;
+  height: 385px;
   position: absolute;
   left: 0;
   top: 0;
@@ -771,7 +997,7 @@ main {
 
 @media (max-width: 1024px) {
   .breadcrumbs {
-    margin-top: 80px;
+    margin-top: 50px;
   }
 }
 
@@ -790,7 +1016,7 @@ main {
 }
 
 .header.fixed {
-  background: none;
+  background: #fff;
   -webkit-backdrop-filter: none;
           backdrop-filter: none;
 }
@@ -818,11 +1044,10 @@ main {
 
 .header__logo {
   height: 40px;
-}
-
-.header__logo img {
-  width: 100%;
-  height: 100%;
+  width: 151px;
+  background-image: url(../img/logo-rivne.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .header__burger {
@@ -976,7 +1201,7 @@ main {
   left: 0;
   top: 140px;
   width: 100%;
-  padding: 60px 0;
+  padding: 32px 0;
   background-color: #fff;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -995,12 +1220,11 @@ main {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  gap: 14px;
+  gap: 24px;
+  position: relative;
 }
 
 .header-dropdown__list {
-  width: 25%;
-  min-width: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1015,6 +1239,10 @@ main {
 }
 
 .header-dropdown__link {
+  max-width: 220px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   line-height: normal;
   font-size: 0.975rem;
   color: #444;
@@ -1041,14 +1269,33 @@ main {
     transition: all 0.5s ease;
   }
   .header__link:hover {
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
     color: #ff0000;
     opacity: 1;
   }
-  .header .header-dropdown__link:hover {
-    color: red;
-    text-decoration: underline;
+  .header .header-dropdown__link {
+    position: relative;
+  }
+  .header .header-dropdown__link::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: -19px;
+    width: 14px;
+    height: 11px;
+    background-image: url(../img/arrw.svg);
+    background-size: 14px 11px;
+    opacity: 0;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .header .header-dropdown__link:hover::before {
+    opacity: 1;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
   }
   .header .header-dropdown__link_inactive {
     pointer-events: none;
@@ -1063,6 +1310,8 @@ main {
     position: fixed;
     background-color: #fff;
     border-bottom: 1px solid #eee;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
   }
   .header__burger {
     display: block;
@@ -1155,6 +1404,9 @@ main {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
   }
+  .header__logo {
+    background-image: url(../img/logo-rivne-black.svg);
+  }
   .header-dropdown {
     position: relative;
     left: 0;
@@ -1208,8 +1460,9 @@ main {
     left: -10px;
     width: 3px;
     height: 90%;
+    border: none;
     border-radius: 2px 0 0 2px;
-    background: #222;
+    background: #ff0000;
   }
   .time-date {
     -webkit-box-orient: vertical;
@@ -1308,130 +1561,6 @@ main {
   .header-dropdown.fixed {
     position: fixed;
   }
-}
-
-.hover-links {
-  padding: 24px 0;
-}
-
-.hover-links__box {
-  border-radius: 4px;
-  overflow: hidden;
-  background-color: #777;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  position: relative;
-}
-
-.hover-links__link {
-  width: 100%;
-  color: #fff;
-  width: calc(100% / 3);
-  padding: 250px 30px 30px;
-  height: 400px;
-  position: relative;
-  overflow: hidden;
-  position: relative;
-  z-index: 3;
-}
-
-.hover-links__link.off {
-  z-index: 4;
-}
-
-.hover-links__link.off .hover-links__img {
-  opacity: 0;
-}
-
-.hover-links__link.off .hover-links__description {
-  opacity: 0.6;
-}
-
-.hover-links__link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  z-index: 1;
-  background-color: #000;
-  opacity: 0.4;
-}
-
-.hover-links__link::before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  border: 12px solid transparent;
-  border-top: 12px solid #fff;
-  border-right: 12px solid #fff;
-  opacity: 0.45;
-  z-index: 3;
-}
-
-.hover-links__link:nth-child(2) .hover-links__img {
-  background-image: url(../img/restaurants-bg.jpg);
-  left: -100%;
-}
-
-.hover-links__link:nth-child(3) .hover-links__img {
-  background-image: url(../img/VIP-services-bg.jpg);
-  left: -200%;
-}
-
-.hover-links__link:hover {
-  overflow: visible;
-}
-
-.hover-links__img {
-  background-image: url(../img/shoppingBG.jpg);
-  background-size: cover;
-  background-position: center;
-  z-index: 1;
-  -webkit-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 300%;
-  height: 100%;
-}
-
-.hover-links__description {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 10px;
-  z-index: 2;
-  -webkit-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
-}
-
-.hover-links__description span {
-  font-size: 1.75rem;
-}
-
-.hover-links__title {
-  width: 100%;
-  font-size: 1.75rem;
-  font-weight: bold;
-  text-align: center;
 }
 
 .hover-slider {
@@ -1805,7 +1934,7 @@ main {
   font-size: 1.0625rem;
   line-height: 1.5rem;
   max-width: 610px;
-  padding-bottom: 120px;
+  padding-bottom: 24px;
 }
 
 .vip-terminal__small-title {
@@ -1816,6 +1945,7 @@ main {
 }
 
 .vip-terminal__header {
+  margin-top: 14px;
   width: 100%;
   background-color: #fff;
   border-radius: 4px;
@@ -1993,4 +2123,10 @@ main {
 .red-button {
   width: 100%;
   margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+  .vip-terminal__description {
+    padding-bottom: 115px;
+  }
 }

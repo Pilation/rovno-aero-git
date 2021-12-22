@@ -547,7 +547,7 @@ main {
 
 .background {
   width: 100%;
-  height: 485px;
+  height: 385px;
   position: absolute;
   left: 0;
   top: 0;
@@ -997,7 +997,7 @@ main {
 
 @media (max-width: 1024px) {
   .breadcrumbs {
-    margin-top: 80px;
+    margin-top: 50px;
   }
 }
 
@@ -1016,7 +1016,7 @@ main {
 }
 
 .header.fixed {
-  background: none;
+  background: #fff;
   -webkit-backdrop-filter: none;
           backdrop-filter: none;
 }
@@ -1044,11 +1044,10 @@ main {
 
 .header__logo {
   height: 40px;
-}
-
-.header__logo img {
-  width: 100%;
-  height: 100%;
+  width: 151px;
+  background-image: url(../img/logo-rivne.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .header__burger {
@@ -1202,7 +1201,7 @@ main {
   left: 0;
   top: 140px;
   width: 100%;
-  padding: 60px 0;
+  padding: 32px 0;
   background-color: #fff;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -1221,12 +1220,11 @@ main {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  gap: 14px;
+  gap: 24px;
+  position: relative;
 }
 
 .header-dropdown__list {
-  width: 25%;
-  min-width: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1241,6 +1239,10 @@ main {
 }
 
 .header-dropdown__link {
+  max-width: 220px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   line-height: normal;
   font-size: 0.975rem;
   color: #444;
@@ -1267,14 +1269,33 @@ main {
     transition: all 0.5s ease;
   }
   .header__link:hover {
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
     color: #ff0000;
     opacity: 1;
   }
-  .header .header-dropdown__link:hover {
-    color: red;
-    text-decoration: underline;
+  .header .header-dropdown__link {
+    position: relative;
+  }
+  .header .header-dropdown__link::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: -19px;
+    width: 14px;
+    height: 11px;
+    background-image: url(../img/arrw.svg);
+    background-size: 14px 11px;
+    opacity: 0;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .header .header-dropdown__link:hover::before {
+    opacity: 1;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
   }
   .header .header-dropdown__link_inactive {
     pointer-events: none;
@@ -1289,6 +1310,8 @@ main {
     position: fixed;
     background-color: #fff;
     border-bottom: 1px solid #eee;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
   }
   .header__burger {
     display: block;
@@ -1381,6 +1404,9 @@ main {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
   }
+  .header__logo {
+    background-image: url(../img/logo-rivne-black.svg);
+  }
   .header-dropdown {
     position: relative;
     left: 0;
@@ -1434,8 +1460,9 @@ main {
     left: -10px;
     width: 3px;
     height: 90%;
+    border: none;
     border-radius: 2px 0 0 2px;
-    background: #222;
+    background: #ff0000;
   }
   .time-date {
     -webkit-box-orient: vertical;
@@ -1534,130 +1561,6 @@ main {
   .header-dropdown.fixed {
     position: fixed;
   }
-}
-
-.hover-links {
-  padding: 24px 0;
-}
-
-.hover-links__box {
-  border-radius: 4px;
-  overflow: hidden;
-  background-color: #777;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  position: relative;
-}
-
-.hover-links__link {
-  width: 100%;
-  color: #fff;
-  width: calc(100% / 3);
-  padding: 250px 30px 30px;
-  height: 400px;
-  position: relative;
-  overflow: hidden;
-  position: relative;
-  z-index: 3;
-}
-
-.hover-links__link.off {
-  z-index: 4;
-}
-
-.hover-links__link.off .hover-links__img {
-  opacity: 0;
-}
-
-.hover-links__link.off .hover-links__description {
-  opacity: 0.6;
-}
-
-.hover-links__link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  z-index: 1;
-  background-color: #000;
-  opacity: 0.4;
-}
-
-.hover-links__link::before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  border: 12px solid transparent;
-  border-top: 12px solid #fff;
-  border-right: 12px solid #fff;
-  opacity: 0.45;
-  z-index: 3;
-}
-
-.hover-links__link:nth-child(2) .hover-links__img {
-  background-image: url(../img/restaurants-bg.jpg);
-  left: -100%;
-}
-
-.hover-links__link:nth-child(3) .hover-links__img {
-  background-image: url(../img/VIP-services-bg.jpg);
-  left: -200%;
-}
-
-.hover-links__link:hover {
-  overflow: visible;
-}
-
-.hover-links__img {
-  background-image: url(../img/shoppingBG.jpg);
-  background-size: cover;
-  background-position: center;
-  z-index: 1;
-  -webkit-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 300%;
-  height: 100%;
-}
-
-.hover-links__description {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 10px;
-  z-index: 2;
-  -webkit-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
-}
-
-.hover-links__description span {
-  font-size: 1.75rem;
-}
-
-.hover-links__title {
-  width: 100%;
-  font-size: 1.75rem;
-  font-weight: bold;
-  text-align: center;
 }
 
 .hover-slider {
@@ -2008,6 +1911,12 @@ main {
 
 .header {
   color: #222;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+}
+
+.header__logo {
+  background-image: url(../img/logo-rivne-black.svg);
 }
 
 .header__language {
@@ -2025,6 +1934,106 @@ main {
 
 .header__link {
   color: #222;
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  z-index: 100;
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup.open .popup__content {
+  -webkit-transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+          transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+  opacity: 1;
+}
+
+.popup__area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.popup__body {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 10px;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
+.popup__content {
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: "Roboto", sans-serif;
+  color: #222;
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+  padding: 24px;
+  max-width: 800px;
+  position: relative;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  -webkit-transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+          transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+
+.popup__content_image {
+  padding: 0;
+}
+
+.popup__image img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.popup__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 1.25rem;
+  color: #222;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.popup__title {
+  font-size: 1.75rem;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 .news__box-header, .news__box-main {

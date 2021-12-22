@@ -1,5 +1,8 @@
 @import "_null.scss";
 @import "_fonts.scss";
+@import "_slick-theme.scss";
+@import "_slick.scss";
+@import "_sliders.scss";
 @import "_main-same.scss";
 @import "_header-container-same.scss";
 @import "_pages-buttons-footer.scss";
@@ -16,6 +19,7 @@
 }
 .section-title {
     color: $white;
+    padding-bottom: 100px;
 }
 //! Changed color
 
@@ -26,7 +30,7 @@
 //! Unique
 .shopping {
     &__box {
-        padding-top: 180px;
+        padding-top: 14px;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
@@ -96,5 +100,12 @@
         & span {
             color: $veryLightGrey;
         }
+    }
+}
+
+@media (max-width: 1024px) {
+    .section-title {
+        color: $white;
+        padding-bottom: 190px;
     }
 }
