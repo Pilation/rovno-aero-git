@@ -239,3 +239,30 @@
         }
     }
 }
+
+//! Hovers
+@media screen and (min-width: 768px) {
+    .advertisement {
+        &__link-outside {
+            transition: transform 0.5s ease;
+            &:hover {
+                transform: scale(1.1);
+                border: 2px solid $rivne-red;
+                transition: transform 0.5s ease;
+            }
+        }
+    }
+    .news-card {
+        transition: all 0.5s ease;
+        &:hover {
+            transform: scale(1.1);
+            border: 1px solid $rivne-red;
+            transition: all 0.5s ease;
+        }
+        &:last-child:hover {
+            transform: scale(1);
+            border: none;
+            transition: all 0.5s ease;
+        }
+    }
+}

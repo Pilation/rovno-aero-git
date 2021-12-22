@@ -1,11 +1,6 @@
 .header {
     color: $grey;
 
-    &__border {
-        height: 40px;
-        width: 1px;
-        background-color: #eeeeee4d;
-    }
     &__language {
         color: $grey;
     }
@@ -20,11 +15,5 @@
 
     &__link {
         color: $grey;
-    }
-}
-
-.current {
-    &::before {
-        background: $grey;
     }
 }

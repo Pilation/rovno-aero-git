@@ -590,7 +590,7 @@ main {
 }
 
 .red-button {
-  background-color: #e2231e;
+  background-color: #ff0000;
   color: #fff;
 }
 
@@ -824,6 +824,10 @@ main {
   overflow: hidden;
 }
 
+.subscription-form__title {
+  cursor: pointer;
+}
+
 .subscription-form__input {
   border-radius: 4px 0 0 4px;
   width: 100%;
@@ -835,7 +839,7 @@ main {
 .subscription-form__button {
   height: 100%;
   min-width: 45px;
-  background-color: #e2231e;
+  background-color: #ff0000;
 }
 
 .subscription-form__button span {
@@ -897,7 +901,7 @@ main {
 }
 
 .contact-card_red {
-  background-color: #e2231e;
+  background-color: #ff0000;
 }
 
 .contact-card_red span {
@@ -942,16 +946,10 @@ main {
   bottom: 40px;
   right: 25px;
   z-index: 50;
-  width: 50px;
-  height: 50px;
-  background-color: #e2231e;
+  width: 40px;
+  height: 40px;
+  background-color: #ff0000;
   border-radius: 5px;
-  line-height: 50px;
-  text-align: center;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 22px;
-  color: #fff;
   opacity: 0.1;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -962,19 +960,22 @@ main {
   position: absolute;
   -webkit-transform-origin: center;
           transform-origin: center;
+  overflow: hidden;
   left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
-          transform: translate(-50%, -50%) rotate(-90deg);
-  height: 40px;
-  width: 40px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  height: 37px;
+  width: 37px;
   background-color: #fff;
   -webkit-mask-image: url(../img/go-top-plane.svg);
           mask-image: url(../img/go-top-plane.svg);
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
-  -webkit-mask-size: 40px 40px;
-          mask-size: 40px 40px;
+  -webkit-mask-size: 50px 50px;
+          mask-size: 50px 50px;
+  -webkit-mask-position: center -5px;
+          mask-position: center -5px;
 }
 
 .go-top-button.show {
@@ -1009,6 +1010,15 @@ main {
   z-index: 100;
   font-size: 0.975rem;
   color: #fff;
+  background: rgba(255, 255, 255, 0.24);
+  -webkit-backdrop-filter: blur(64px);
+          backdrop-filter: blur(64px);
+}
+
+.header.fixed {
+  background: none;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
 }
 
 .header__upper-box {
@@ -1045,7 +1055,7 @@ main {
   display: none;
   margin-left: auto;
   position: relative;
-  width: 40px;
+  width: 30px;
   height: 30px;
   z-index: 50;
 }
@@ -1059,12 +1069,14 @@ main {
   height: 4px;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  background-color: #ff0000;
 }
 
 .header__burger::before, .header__burger::after {
   content: "";
   position: absolute;
   background: #222;
+  background-color: #ff0000;
   border-radius: 2px;
   left: 0;
   width: 100%;
@@ -1118,7 +1130,7 @@ main {
 .header__menu {
   height: 60px;
   border-top: 1px solid #eeeeee4d;
-  border-bottom: 1px solid #eeeeee4d;
+  border-bottom: 1px solid #ff0000;
   font-weight: 400;
   line-height: 60px;
 }
@@ -1155,11 +1167,14 @@ main {
   position: absolute;
   z-index: 10;
   bottom: 1px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  border-radius: 1px 1px 0 0;
-  background: #fff;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 40px 7px 40px;
+  border-color: transparent transparent #ff0000 transparent;
 }
 
 .time-date {
@@ -1247,14 +1262,21 @@ main {
 }
 
 @media screen and (min-width: 768px) {
+  .header__link {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
   .header__link:hover {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    color: #ff0000;
     opacity: 1;
   }
-  .header-dropdown__link:hover {
+  .header .header-dropdown__link:hover {
     color: red;
     text-decoration: underline;
   }
-  .header-dropdown__link_inactive {
+  .header .header-dropdown__link_inactive {
     pointer-events: none;
   }
 }
@@ -1275,6 +1297,7 @@ main {
     display: none;
   }
   .header__upper-box {
+    height: 50px;
     gap: 10px;
   }
   .header__menu {
@@ -1292,7 +1315,7 @@ main {
   }
   .header__menu.active {
     position: absolute;
-    top: 80px;
+    top: 50px;
     left: 0;
     height: 100vh;
     width: 100%;
@@ -1341,7 +1364,7 @@ main {
     right: 10px;
     top: 18px;
     border: 7px solid transparent;
-    border-left: 7px solid #222;
+    border-left: 7px solid #ff0000;
     -webkit-transform-origin: center center;
             transform-origin: center center;
     -webkit-transition: all 0.5s;
@@ -1987,12 +2010,6 @@ main {
   color: #222;
 }
 
-.header__border {
-  height: 40px;
-  width: 1px;
-  background-color: #eeeeee4d;
-}
-
 .header__language {
   color: #222;
 }
@@ -2008,10 +2025,6 @@ main {
 
 .header__link {
   color: #222;
-}
-
-.current::before {
-  background: #222;
 }
 
 .airlines__box {

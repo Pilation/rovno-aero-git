@@ -32,7 +32,7 @@ $mw: 1440px;
 $white: #fff;
 $grey: #222;
 $lightGrey: #444;
-$rivne-red: #e2231e;
+$rivne-red: #ff0000;
 $veryLightGrey: #777;
 
 main {
@@ -305,6 +305,7 @@ main {
         overflow: hidden;
     }
     &__title {
+        cursor: pointer;
     }
 
     &__input {
@@ -406,31 +407,27 @@ main {
     bottom: 40px;
     right: 25px;
     z-index: 50;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: $rivne-red;
     border-radius: 5px;
-    line-height: 50px;
-    text-align: center;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 22px;
-    color: #fff;
     opacity: 0.1;
     transition: all 0.5s;
     &::before {
         content: "";
         position: absolute;
         transform-origin: center;
+        overflow: hidden;
         left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%) rotate(-90deg);
-        height: 40px;
-        width: 40px;
+        transform: translateX(-50%);
+        bottom: 0;
+        height: 37px;
+        width: 37px;
         background-color: $white;
         mask-image: url(../img/go-top-plane.svg);
         mask-repeat: no-repeat;
-        mask-size: 40px 40px;
+        mask-size: 50px 50px;
+        mask-position: center -5px;
     }
 
     &.show {
