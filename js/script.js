@@ -1,5 +1,4 @@
 //todo Header Starts 
-
 const burger = document.querySelector(`.header__burger`);
 burger.addEventListener("click", () => {
     let burgers = document.querySelectorAll('.header__burger, .header__menu, .main');
@@ -69,12 +68,10 @@ window.onresize = () => {
         document.querySelectorAll(`.switch-item`).forEach(item => item.classList.replace(`slider-link`, `hover-link`));
     }
 }
-
 //todo Hover-Slider ends
 
 
 //todo Go-Top Button starts
-
 var btn = $('.go-top-button');
 
 $(window).scroll(function () {
@@ -93,7 +90,6 @@ btn.on('click', function (e) {
 //todo Go-Top Button ends
 
 //todo See More menu starts 
-
 jQuery(function ($) {
     $('body').on('click', '.airlines__more', function () {
         $(this).addClass(`airlines__less`).removeClass(`airlines__more`);
@@ -111,7 +107,6 @@ jQuery(function ($) {
 
 
 //todo Sliders starts 
-
 $('.slider-box').slick({
     arrows: false,
     dots: true,
@@ -143,20 +138,17 @@ $('.header-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 500,
-
     infinite: true,
     initialSlide: 0,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 4500,
     pauseOnFocus: true,
     pauseOnHover: true,
     pauseOnDotsHover: false,
-
     swipe: true,
     touchThreshold: 5,
     touchMove: true,
     waitForAnimate: true,
-
     fade: true,
     touchMove: true,
     focusOnSelect: true,
@@ -165,3 +157,44 @@ $('.header-slider').slick({
 });
 
 //todo Sliders ends
+
+
+// const ScreenResolutionChecker = document.querySelector(`.huyok`);
+// huyok.style.height = ${huyok.offsetHeight}px;
+// huyok.style.width = ${huyok.offsetWidth}px;
+
+// let ScreenResolutionChecker = document.createElement(`span`);
+// ScreenResolutionChecker.style.cssText = `
+//     position: fixed;
+//     top: 10px;
+//     right: 10px;
+//     z-index: 100500;
+//     background: lightcoral;
+//     padding: 5px;
+//     border-radius: 5px;
+//     font-family: Arial;
+// `;
+
+// ScreenResolutionChecker.innerHTML = `width = ${window.innerWidth}px, height = ${window.innerHeight}px`;
+// document.querySelector(`body`).append(ScreenResolutionChecker)
+// window.addEventListener(`resize`, () => {
+//     ScreenResolutionChecker.innerHTML = `width = ${window.innerWidth}px, height = ${window.innerHeight}px`;
+// })
+
+let ScreenResolutionChecker = document.createElement(`span`);
+ScreenResolutionChecker.style.cssText = `
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 100500;
+    background: lightcoral;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: Arial;
+`;
+
+ScreenResolutionChecker.innerHTML = `width = ${window.innerWidth}px, height = ${window.innerHeight}px`;
+document.querySelector(`body`).append(ScreenResolutionChecker)
+window.addEventListener(`resize`, () => {
+    ScreenResolutionChecker.innerHTML = `width = ${window.innerWidth}px, height = ${window.innerHeight}px`;
+})
