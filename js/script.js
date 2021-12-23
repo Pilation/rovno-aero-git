@@ -1,72 +1,34 @@
 //todo Header Starts 
 
 const burger = document.querySelector(`.header__burger`);
-burger.onclick = () => {
+burger.addEventListener("click", () => {
     let burgers = document.querySelectorAll('.header__burger, .header__menu, .main');
     document.querySelector(`body`).classList.toggle(`lock`);
     burgers.forEach(item => item.classList.toggle('active'));
-}
-
-
-jQuery(function ($) {
-    $('body').on('click', '.header__item_dropdown', function () {
-        $(this).toggleClass(`more`);
-    });
-
 });
-// //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// var lastScrollTop = 0;
-// let element;
-// // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
-// element.addEventListener("scroll", function () { // or window.addEventListener("scroll"....
-//     var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-//     if (st > lastScrollTop) {
-//         // downscroll code
-//     } else {
-//         // upscroll code
-//     }
-//     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-// }, false);
-// //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// let didScroll;
-// let lastScrollTop = 0;
-// let delta = 80;
-// let navbarHeight = $('header').outerHeight();
+document.querySelectorAll('.header__item_dropdown').forEach(item => item.addEventListener(`click`, () => {
+    item.classList.toggle(`more`);
+}));
 
-// $(window).scroll(() => didScroll = true);
+let lastScrollTop = 0;
+const headerMenuHeight = document.querySelector(`.header__upper-box`).offsetHeight;
+window.addEventListener("scroll", function () {
+    let ScrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-// setInterval(() => didScroll ? (hasScrolled(), didScroll = false) : ``, 250);
-
-// function hasScrolled() {
-//     let st = $(this).scrollTop();
-
-//     // Make sure they scroll more than delta
-//     if (Math.abs(lastScrollTop - st) <= delta)
-//         return;
-
-//     // If they scrolled down and are past the navbar, add class .nav-up.
-//     // This is necessary so you never see what is "behind" the navbar.
-//     if (st > lastScrollTop && st > navbarHeight) {
-//         // Scroll Down
-//         $('header').removeClass('nav-down').addClass('nav-up');
-//     } else {
-//         // Scroll Up
-//         if (st + $(window).height() < $(document).height()) {
-//             $('header').removeClass('nav-up').addClass('nav-down');
-//         }
-//     }
-//     lastScrollTop = st;
-// }
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
-
-$(window).scroll(function () {
-    var scroll = $(window).scrollTop();
-    if (scroll >= 80) {
-        $(".header__menu, .header-dropdown, .header").addClass("fixed");
+    let ScrollDirection = ScrollPosition < lastScrollTop ? `up` : `down`;
+    if (window.scrollY >= 80) {
+        document.querySelectorAll(`.header, .header__menu`).forEach(item => item.classList.add(`white`));
+        document.querySelector(`.header`).style.top = `-80px`;
     } else {
-        $(".header__menu, .header-dropdown, .header").removeClass("fixed");
+        document.querySelectorAll(`.header, .header__menu`).forEach(item => item.classList.remove(`white`));
     }
+    if (window.scrollY >= 80 && ScrollDirection === `up`) {
+        document.querySelector(`.header`).style.top = `0`;
+    }
+
+    lastScrollTop = ScrollPosition <= 0 ? 0 : ScrollPosition; // For Mobile or negative scrolling 
 });
+
 
 //todo Header Ends
 
@@ -103,7 +65,6 @@ window.onresize = () => {
         document.querySelectorAll(`.switch-item`).forEach(item => item.classList.replace(`hover-link`, `slider-link`));
     }
     if (actualDocWidth > 1024) {
-        console.log(actualDocWidth)
         document.querySelector(`.switch-container`).classList.replace(`slider-box`, `hover-box`);
         document.querySelectorAll(`.switch-item`).forEach(item => item.classList.replace(`slider-link`, `hover-link`));
     }

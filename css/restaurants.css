@@ -496,9 +496,10 @@ main {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1920px;
   margin: 0 auto;
-  padding: 0px;
+  padding: 0 40px;
+  min-height: 0;
 }
 
 .wrapper {
@@ -988,10 +989,9 @@ main {
   opacity: 1;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1400) {
   .container {
-    width: 100%;
-    padding: 0 2.5%;
+    padding: 0 24px;
   }
 }
 
@@ -999,11 +999,16 @@ main {
   .breadcrumbs {
     margin-top: 50px;
   }
+  .container {
+    padding: 0 3.5%;
+  }
 }
 
 .header {
+  position: fixed;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   width: 100%;
-  position: absolute;
   background-color: transparent;
   top: 0;
   left: 0;
@@ -1013,12 +1018,6 @@ main {
   background: rgba(255, 255, 255, 0.24);
   -webkit-backdrop-filter: blur(64px);
           backdrop-filter: blur(64px);
-}
-
-.header.fixed {
-  background: #fff;
-  -webkit-backdrop-filter: none;
-          backdrop-filter: none;
 }
 
 .header__upper-box {
@@ -1220,7 +1219,6 @@ main {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  gap: 24px;
   position: relative;
 }
 
@@ -1236,6 +1234,10 @@ main {
       -ms-flex-pack: start;
           justify-content: flex-start;
   gap: 16px;
+}
+
+.header-dropdown__list li {
+  padding-left: 24px;
 }
 
 .header-dropdown__link {
@@ -1302,12 +1304,17 @@ main {
   }
 }
 
+@media (max-width: 1400px) {
+  .header-dropdown__list li {
+    padding-left: 16px;
+  }
+}
+
 @media (max-width: 1024px) {
   body.lock {
     overflow: hidden;
   }
   .header {
-    position: fixed;
     background-color: #fff;
     border-bottom: 1px solid #eee;
     -webkit-backdrop-filter: none;
@@ -1437,6 +1444,9 @@ main {
   .header-dropdown__list {
     width: 100%;
   }
+  .header-dropdown__list li {
+    padding-left: 0;
+  }
   .header-dropdown__link {
     line-height: normal;
     font-size: 1.0625rem;
@@ -1543,23 +1553,27 @@ main {
   .header__item_dropdown:hover .header-dropdown {
     visibility: visible;
   }
-  .header__menu.fixed {
+  .header.white {
+    color: #222;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
     background-color: #fff;
-    margin: 0 auto;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    height: 60px;
   }
-  .header__menu.fixed .header__link {
+  .header.white .header__logo {
+    background-image: url(../img/logo-rivne-black.svg);
+  }
+  .header.white .header__language {
+    color: #222;
+  }
+  .header.white .header__menu {
+    border-top: 1px solid #eeeeee4d;
+  }
+  .header.white .header__menu .header__link {
     color: #222;
     opacity: 0.7;
   }
-  .header__menu.fixed .header-dropdown {
-    top: 60px;
-  }
-  .header-dropdown.fixed {
-    position: fixed;
+  .header.white .header__link {
+    color: #222;
   }
 }
 

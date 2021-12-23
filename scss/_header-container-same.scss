@@ -1,6 +1,7 @@
 .header {
+    position: fixed;
+    transition: all 0.5s;
     width: 100%;
-    position: absolute;
     background-color: transparent;
     top: 0;
     left: 0;
@@ -9,10 +10,6 @@
     color: $white;
     background: rgba(255, 255, 255, 0.24);
     backdrop-filter: blur(64px);
-    &.fixed {
-        background: $white;
-        backdrop-filter: none;
-    }
     &__upper-box {
         width: 100%;
         display: flex;
@@ -167,7 +164,6 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        gap: 24px;
         position: relative;
     }
 
@@ -176,6 +172,9 @@
         flex-direction: column;
         justify-content: flex-start;
         gap: 16px;
+        & li {
+            padding-left: 24px;
+        }
     }
 
     &__link {
@@ -236,6 +235,15 @@
         }
     }
 }
+@media (max-width: 1400px) {
+    .header-dropdown {
+        &__list {
+            & li {
+                padding-left: 16px;
+            }
+        }
+    }
+}
 
 //! Burger
 @media (max-width: 1024px) {
@@ -244,7 +252,6 @@
     }
 
     .header {
-        position: fixed;
         background-color: $white;
         border-bottom: 1px solid #eee;
         backdrop-filter: none;
@@ -353,6 +360,9 @@
 
         &__list {
             width: 100%;
+            & li {
+                padding-left: 0;
+            }
         }
 
         &__link {
@@ -457,29 +467,34 @@
         position: fixed;
         top: 60px;
     }
+
     //todo Show the dropdown menu on hover
     .header__item_dropdown:hover .header-dropdown {
         visibility: visible;
     }
 
-    .header__menu.fixed {
+    .header.white {
+        color: $grey;
+        backdrop-filter: none;
         background-color: $white;
-        margin: 0 auto;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        height: 60px;
-        & .header__link {
+        .header__logo {
+            background-image: url(../img/logo-rivne-black.svg);
+        }
+
+        .header__language {
             color: $grey;
-            opacity: 0.7;
         }
-        & .header-dropdown {
-            top: 60px;
+
+        .header__menu {
+            border-top: 1px solid #eeeeee4d;
+            & .header__link {
+                color: $grey;
+                opacity: 0.7;
+            }
         }
-    }
-    .header-dropdown {
-        &.fixed {
-            position: fixed;
+
+        .header__link {
+            color: $grey;
         }
     }
 }
