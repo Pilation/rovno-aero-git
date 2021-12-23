@@ -158,29 +158,6 @@ $('.header-slider').slick({
 
 //todo Sliders ends
 
-
-// const ScreenResolutionChecker = document.querySelector(`.huyok`);
-// huyok.style.height = ${huyok.offsetHeight}px;
-// huyok.style.width = ${huyok.offsetWidth}px;
-
-// let ScreenResolutionChecker = document.createElement(`span`);
-// ScreenResolutionChecker.style.cssText = `
-//     position: fixed;
-//     top: 10px;
-//     right: 10px;
-//     z-index: 100500;
-//     background: lightcoral;
-//     padding: 5px;
-//     border-radius: 5px;
-//     font-family: Arial;
-// `;
-
-// ScreenResolutionChecker.innerHTML = `width = ${window.innerWidth}px, height = ${window.innerHeight}px`;
-// document.querySelector(`body`).append(ScreenResolutionChecker)
-// window.addEventListener(`resize`, () => {
-//     ScreenResolutionChecker.innerHTML = `width = ${window.innerWidth}px, height = ${window.innerHeight}px`;
-// })
-
 let ScreenResolutionChecker = document.createElement(`span`);
 ScreenResolutionChecker.style.cssText = `
     position: fixed;
