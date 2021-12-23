@@ -1253,7 +1253,7 @@ main {
 }
 
 .language {
-  visibility: hidden;
+  display: none;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -1482,7 +1482,7 @@ main {
     border-top: 5px solid #eee;
     background-color: #fff;
     padding: 0 2.5%;
-    visibility: visible;
+    display: block;
     height: 80px;
     max-height: 200px;
     opacity: 1;
@@ -2062,9 +2062,9 @@ body.lock {
   position: absolute;
   z-index: 10;
   left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, calc(-50% + 240px));
-          transform: translate(-50%, calc(-50% + 240px));
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 12vh;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -2126,9 +2126,9 @@ body.lock {
   max-width: 350px;
   width: 100%;
   left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, calc(-50% + 115px));
-          transform: translate(-50%, calc(-50% + 115px));
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: calc(12vh + 32px);
 }
 
 .header-slider__tag {

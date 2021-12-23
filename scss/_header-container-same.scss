@@ -191,7 +191,7 @@
 }
 
 .language {
-    visibility: hidden;
+    display: none;
     height: fit-content;
     max-height: 0;
     opacity: 0;
@@ -401,7 +401,7 @@
         border-top: 5px solid #eee;
         background-color: $white;
         padding: 0 2.5%;
-        visibility: visible;
+        display: block;
         height: 80px;
         max-height: 200px;
         opacity: 1;
