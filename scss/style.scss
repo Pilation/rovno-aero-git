@@ -90,19 +90,6 @@
         gap: 8px;
     }
 
-    &__description {
-        overflow: hidden;
-        height: 250px;
-        position: absolute;
-        border-radius: 2px;
-        z-index: 10;
-        max-width: 350px;
-        width: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: calc(12vh + 32px);
-    }
-
     &__tag {
         font-size: $f13;
         line-height: $f16;
@@ -116,6 +103,17 @@
         color: $white;
         font-size: $f26;
         line-height: 2.5rem;
+        max-height: fit-content;
+        overflow: hidden;
+        height: 160px;
+        position: absolute;
+        border-radius: 2px;
+        z-index: 10;
+        max-width: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 12vh;
+        text-align: center;
     }
 }
 
@@ -219,8 +217,17 @@
 }
 
 @media (max-width: 1024px) {
-    &__arrows {
-        display: none;
+    .header-slider {
+        &__arrows {
+            display: none;
+        }
+        &__link {
+            bottom: 10vh;
+            height: 116px;
+            font-size: $f20;
+            line-height: 1.8rem;
+            max-width: 80%;
+        }
     }
 }
 

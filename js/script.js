@@ -146,7 +146,7 @@ $('.header-slider').slick({
 
     infinite: true,
     initialSlide: 0,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 4500,
     pauseOnFocus: true,
     pauseOnHover: true,
