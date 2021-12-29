@@ -55,7 +55,11 @@
 
     &__logo {
         width: 150px;
-        min-width: 150px;
+        min-height: 40px;
+        background-image: url(../img/image-loader.gif);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 30px 30px;
         & img {
             margin: 0 auto;
             max-width: 100%;

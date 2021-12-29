@@ -1611,9 +1611,6 @@ main {
 }
 
 .hover-slider__img {
-  background-image: url(../img/shoppingBG.jpg);
-  background-size: cover;
-  background-position: center;
   z-index: 1;
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
@@ -1621,6 +1618,19 @@ main {
   top: 0;
   left: 0;
   width: 300%;
+  height: 100%;
+  background-image: url(../img/image-loader.gif);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+}
+
+.hover-slider__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
   height: 100%;
 }
 
@@ -1687,12 +1697,10 @@ main {
 }
 
 .hover-link:nth-child(2) .hover-slider__img {
-  background-image: url(../img/restaurants-bg.jpg);
   left: -100%;
 }
 
 .hover-link:nth-child(3) .hover-slider__img {
-  background-image: url(../img/VIP-services-bg.jpg);
   left: -200%;
 }
 
@@ -1740,9 +1748,6 @@ main {
 }
 
 .slider-link .hover-slider__img {
-  background-image: url(../img/shoppingBG.jpg);
-  background-size: cover;
-  background-position: center;
   z-index: 1;
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
@@ -1753,12 +1758,13 @@ main {
   height: 100%;
 }
 
-.slider-link:nth-child(2) .hover-slider__img {
-  background-image: url(../img/restaurants-bg.jpg);
-}
-
-.slider-link:nth-child(3) .hover-slider__img {
-  background-image: url(../img/VIP-services-bg.jpg);
+.slider-link .hover-slider__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
 }
 
 .footer {
@@ -1976,9 +1982,6 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1994,11 +1997,18 @@ main {
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
   min-width: 250px;
+  min-height: 270px;
+}
+
+.shopping-card__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  -o-object-position: left top;
+     object-position: left top;
   width: 100%;
   height: 100%;
-  min-height: 270px;
-  background-image: url(../img/shop-card.jpg);
-  background-size: cover;
 }
 
 .shopping-card__description {

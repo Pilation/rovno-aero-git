@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex" />
     <title>Restaurants</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="wrapper">
         <!-- header -->
-        <header class="header lock-padding">
+        <header class="header">
             <div class="container">
                 <div class="header__upper-box">
                     <a href="/" class="header__logo">
@@ -39,7 +40,7 @@
                     </button>
                 </div>
             </div>
-            <nav class="header__menu lock-padding">
+            <nav class="header__menu">
                 <div class="container">
                     <ul class="header__list">
                         <li>
@@ -426,7 +427,7 @@
         <div class="slider-container">
             <div class="header-slider">
                 <div class="header-slider__item">
-                    <img src="img/header-slider/header-slider1.png" alt="img">
+                    <img class="lazy" data-src="./img/header-slider/header-slider1.png" alt="img">
                     <a href="/" class="header-slider__link">
                         <strong>
                             Подорожуйте з Рівного з Qatar Airways
@@ -441,7 +442,7 @@
                     </a>
                 </div>
                 <div class="header-slider__item">
-                    <img src="img/header-slider/header-slider2.jpg" alt="img">
+                    <img class="lazy" data-src="./img/header-slider/header-slider2.jpg" alt="img">
                     <a href="/" class="header-slider__link">
                         <strong>
                             Рівне - Рига
@@ -452,7 +453,7 @@
                     </a>
                 </div>
                 <div class="header-slider__item">
-                    <img src="img/header-slider/header-slider3.png" alt="img">
+                    <img class="lazy" data-src="./img/header-slider/header-slider3.png" alt="img">
                     <a href="/" class="header-slider__link">
                         <strong>
                             Абу-Дабі та EXPO 2020 на крилах Wizz Air
@@ -464,7 +465,7 @@
                     </a>
                 </div>
                 <div class="header-slider__item">
-                    <img src="img/header-slider/header-slider4.png" alt="img">
+                    <img class="lazy" data-src="./img/header-slider/header-slider4.png" alt="img">
                     <a href="/" class="header-slider__link">
                         <strong>
                             Рейси Bees Airline з Рівного до Києва,
@@ -475,7 +476,7 @@
                     </a>
                 </div>
                 <div class="header-slider__item">
-                    <img src="img/header-slider/header-slider5.jpg" alt="img">
+                    <img class="lazy" data-src="./img/header-slider/header-slider5.jpg" alt="img">
                     <a href="/" class="header-slider__link">
                         <strong>
                             У Міжнародному аеропорту “Рівне” відкрито нову
@@ -484,7 +485,7 @@
                     </a>
                 </div>
                 <div class="header-slider__item">
-                    <img src="img/header-slider/header-slider6.png" alt="img">
+                    <img class="lazy" data-src="./img/header-slider/header-slider6.png" alt="img">
                     <a href="/" class="header-slider__link">
                         <strong>
                             Щоденні рейси МАУ з Рівного до Києва
@@ -495,7 +496,7 @@
                     </a>
                 </div>
                 <div class="header-slider__item">
-                    <img src="img/header-slider/header-slider7.jpg" alt="img">
+                    <img class="lazy" data-src="./img/header-slider/header-slider7.jpg" alt="img">
                     <a href="/" class="header-slider__link">
                         <strong>
                             До літа на крилах Flydubai
@@ -506,7 +507,7 @@
                     </a>
                 </div>
                 <div class="header-slider__item">
-                    <img src="img/header-slider/header-slider8.png" alt="img">
+                    <img class="lazy" data-src="./img/header-slider/header-slider8.png" alt="img">
                     <a href="/" class="header-slider__link">
                         <strong>
                             Страховий поліс для в'їзду іноземних громадян
@@ -514,7 +515,7 @@
                     </a>
                 </div>
                 <div class="header-slider__item">
-                    <img src="img/header-slider/header-slider9.jpg" alt="img">
+                    <img class="lazy" data-src="./img/header-slider/header-slider9.jpg" alt="img">
                     <a href="/" class="header-slider__link">
                         <strong>
                             Правила перебування в аеропорту "Рівне"
@@ -522,7 +523,7 @@
                     </a>
                 </div>
                 <div class="header-slider__item">
-                    <img src="img/header-slider/header-slider10.jpg" alt="img">
+                    <img class="lazy" data-src="./img/header-slider/header-slider10.jpg" alt="img">
                     <a href="/" class="header-slider__link">
                         <strong>
                             ПЛР-тестування в аеропорту "Рівне"
@@ -542,24 +543,27 @@
             <section class="hover-slider">
                 <div class="container">
                     <div class="switch-container hover-box">
-                        <a class="switch-item hover-link">
+                        <a class="switch-item hover-link" href="./shopping.html">
                             <div class="hover-slider__img">
+                                <img data-src="./img/shoppingBG.jpg" class="lazy" alt="img">
                             </div>
                             <div class="hover-slider__description">
                                 <span class="icon-shopping"></span>
                                 <h2 class="hover-slider__title">Шопінг</h2>
                             </div>
                         </a>
-                        <a class="switch-item hover-link">
+                        <a class="switch-item hover-link" href="./restaurants.html">
                             <div class="hover-slider__img">
+                                <img data-src="./img/restaurants-bg.jpg" class="lazy" alt="img">
                             </div>
                             <div class="hover-slider__description">
                                 <span class="icon-shopping"></span>
                                 <h2 class="hover-slider__title">Ресторани</h2>
                             </div>
                         </a>
-                        <a class="switch-item hover-link">
+                        <a class="switch-item hover-link" href="./vip-terminal.html">
                             <div class="hover-slider__img">
+                                <img data-src="./img/VIP-services-bg.jpg" class="lazy" alt="img">
                             </div>
                             <div class="hover-slider__description">
                                 <span class="icon-shopping"></span>
@@ -587,7 +591,9 @@
                                     ​Аеропорт “Рівне” вітає Qatar Airways, найкращу авіакомпанію світу за версією
                                     Skytrax
                                 </h4>
-                                <div class="news-card__img"></div>
+                                <div class="news-card__img">
+                                    <img data-src="./img/News/news-card-main-BG.png" class="lazy" alt="img">
+                                </div>
                                 <div class="news-card__info">
                                     <span class="grey-button news-card__tag">
                                         Новини
@@ -603,7 +609,9 @@
                                     ​Аеропорт “Рівне” вітає Qatar Airways, найкращу авіакомпанію світу за версією
                                     Skytrax
                                 </h4>
-                                <div class="news-card__img"></div>
+                                <div class="news-card__img">
+                                    <img data-src="./img/News/news-card-main-BG.png" class="lazy" alt="img">
+                                </div>
                                 <div class="news-card__info">
                                     <span class="grey-button news-card__tag">
                                         Новини
@@ -619,7 +627,9 @@
                                     ​Аеропорт “Рівне” вітає Qatar Airways, найкращу авіакомпанію світу за версією
                                     Skytrax
                                 </h4>
-                                <div class="news-card__img"></div>
+                                <div class="news-card__img">
+                                    <img data-src="./img/News/news-card-main-BG.png" class="lazy" alt="img">
+                                </div>
                                 <div class="news-card__info">
                                     <span class="grey-button news-card__tag">
                                         Новини
@@ -635,7 +645,9 @@
                                     ​Аеропорт “Рівне” вітає Qatar Airways, найкращу авіакомпанію світу за версією
                                     Skytrax
                                 </h4>
-                                <div class="news-card__img"></div>
+                                <div class="news-card__img">
+                                    <img data-src="./img/News/news-card-main-BG.png" class="lazy" alt="img">
+                                </div>
                                 <div class="news-card__info">
                                     <span class="grey-button news-card__tag">
                                         Новини
@@ -653,7 +665,8 @@
                                 <div class="subscription-form__input-box">
                                     <input class="subscription-form__input" type="email" id="email" name="email"
                                         placeholder="Ваш Email" aria-required="true">
-                                    <button type="submit" class="subscription-form__button popup-link">
+                                    <button type="button" class="subscription-form__button" data-bs-toggle="modal"
+                                        data-bs-target="#ThankYouModal">
                                         <span class="icon-arr-right"></span>
                                     </button>
                                 </div>
@@ -676,28 +689,36 @@
                         </div>
                         <div class="advertisement__list">
                             <a href="javascript:void(0);" class="advertisement__link-outside">
-                                <img src="img/advertisement/adv1.jpg" alt="img" class="advertisement__picture">
+                                <img data-src="./img/advertisement/adv1.jpg" alt="img"
+                                    class="advertisement__picture lazy">
                             </a>
                             <a href="javascript:void(0);" class="advertisement__link-outside">
-                                <img src="img/advertisement/adv2.jpg" alt="img" class="advertisement__picture">
+                                <img data-src="./img/advertisement/adv2.jpg" alt="img"
+                                    class="advertisement__picture lazy">
                             </a>
                             <a href="javascript:void(0);" class="advertisement__link-outside">
-                                <img src="img/advertisement/adv3.jpg" alt="img" class="advertisement__picture">
+                                <img data-src="./img/advertisement/adv3.jpg" alt="img"
+                                    class="advertisement__picture lazy">
                             </a>
                             <a href="javascript:void(0);" class="advertisement__link-outside">
-                                <img src="img/advertisement/adv4.jpg" alt="img" class="advertisement__picture">
+                                <img data-src="./img/advertisement/adv4.jpg" alt="img"
+                                    class="advertisement__picture lazy">
                             </a>
                             <a href="javascript:void(0);" class="advertisement__link-outside">
-                                <img src="img/advertisement/adv5.jpg" alt="img" class="advertisement__picture">
+                                <img data-src="./img/advertisement/adv5.jpg" alt="img"
+                                    class="advertisement__picture lazy">
                             </a>
                             <a href="javascript:void(0);" class="advertisement__link-outside">
-                                <img src="img/advertisement/adv6.jpg" alt="img" class="advertisement__picture">
+                                <img data-src="./img/advertisement/adv6.jpg" alt="img"
+                                    class="advertisement__picture lazy">
                             </a>
                             <a href="javascript:void(0);" class="advertisement__link-outside">
-                                <img src="img/advertisement/adv7.jpg" alt="img" class="advertisement__picture">
+                                <img data-src="./img/advertisement/adv7.jpg" alt="img"
+                                    class="advertisement__picture lazy">
                             </a>
                             <a href="javascript:void(0);" class="advertisement__link-outside">
-                                <img src="img/advertisement/adv1.jpg" alt="img" class="advertisement__picture">
+                                <img data-src="./img/advertisement/adv1.jpg" alt="img"
+                                    class="advertisement__picture lazy">
                             </a>
                         </div>
                     </div>
@@ -807,22 +828,30 @@
         </footer>
         <!-- go top button -->
         <button class="go-top-button" type="button"></button>
-        <div id="popup" class="popup">
-            <div class="popup__body">
-                <div class="popup__content">
-                    <span class="popup__close">X</span>
-                    <h2 class="popup__title">Спасибо</h2>
-                    Мы свяжемся с вами в ближайшее время
+        <div class="modal fade" id="ThankYouModal" tabindex="-1" aria-labelledby="ThankYouModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ThankYouModalLabel">Спасибо</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Мы свяжемся с вами в ближайшее время</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="js/jquery-3.6.0.js"></script>
-    <script src="slick/slick.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/popups.js"></script>
-
-
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./bootstrap/bootstrap.min.js"></script>
+    <script src="./js/jquery.lazy.min.js"></script>
+    <script src="./slick/slick.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

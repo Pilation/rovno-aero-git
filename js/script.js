@@ -158,6 +158,8 @@ $('.header-slider').slick({
 
 //todo Sliders ends
 
+
+//todo Screen Width 
 let ScreenResolutionChecker = document.createElement(`span`);
 ScreenResolutionChecker.style.cssText = `
     position: fixed;
@@ -175,3 +177,9 @@ document.querySelector(`body`).append(ScreenResolutionChecker)
 window.addEventListener(`resize`, () => {
     ScreenResolutionChecker.innerHTML = `width = ${window.innerWidth}px, height = ${window.innerHeight}px`;
 })
+//todo Screen Width
+
+$(function () {
+    $('.lazy').lazy();
+});
+

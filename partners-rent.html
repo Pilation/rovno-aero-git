@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partners-rent</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css">
     <link rel="stylesheet" href="css/partners-rent.css">
 
 </head>
@@ -12,7 +13,7 @@
 <body>
     <div class="wrapper">
         <!-- header -->
-        <header class="header lock-padding">
+        <header class="header">
             <div class="container">
                 <div class="header__upper-box">
                     <a href="/" class="header__logo">
@@ -39,7 +40,7 @@
                     </button>
                 </div>
             </div>
-            <nav class="header__menu lock-padding">
+            <nav class="header__menu">
                 <div class="container">
                     <ul class="header__list">
                         <li>
@@ -469,7 +470,7 @@
                                 </div>
                                 <div>
                                     <label for="email">Email</label>
-                                    <input type="email" name="email" id="email" placeholder="ваш email"
+                                    <input type="email" name="email" id="email" placeholder="Ваш email"
                                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                                 </div>
                                 <div>
@@ -477,7 +478,8 @@
                                     <textarea name="subject" id="subject" placeholder="Текст повідомлення"></textarea>
                                 </div>
                             </div>
-                            <button class="grey-button red-button popup-link" type="button">
+                            <button class="grey-button red-button popup-link" type="button" data-bs-toggle="modal"
+                                data-bs-target="#ThankYouModal">
                                 Надіслати
                             </button>
                         </form>
@@ -487,27 +489,31 @@
             </section>
             <!-- Hover links -->
             <div class="import">
+                <!-- Hover-links -->
                 <section class="hover-slider">
                     <div class="container">
                         <div class="switch-container hover-box">
-                            <a class="switch-item hover-link">
+                            <a class="switch-item hover-link" href="./shopping.html">
                                 <div class="hover-slider__img">
+                                    <img data-src="./img/shoppingBG.jpg" class="lazy" alt="img">
                                 </div>
                                 <div class="hover-slider__description">
                                     <span class="icon-shopping"></span>
                                     <h2 class="hover-slider__title">Шопінг</h2>
                                 </div>
                             </a>
-                            <a class="switch-item hover-link">
+                            <a class="switch-item hover-link" href="./restaurants.html">
                                 <div class="hover-slider__img">
+                                    <img data-src="./img/restaurants-bg.jpg" class="lazy" alt="img">
                                 </div>
                                 <div class="hover-slider__description">
                                     <span class="icon-shopping"></span>
                                     <h2 class="hover-slider__title">Ресторани</h2>
                                 </div>
                             </a>
-                            <a class="switch-item hover-link">
+                            <a class="switch-item hover-link" href="./vip-terminal.html">
                                 <div class="hover-slider__img">
+                                    <img data-src="./img/VIP-services-bg.jpg" class="lazy" alt="img">
                                 </div>
                                 <div class="hover-slider__description">
                                     <span class="icon-shopping"></span>
@@ -621,20 +627,30 @@
         </footer>
         <!-- go top button -->
         <button class="go-top-button" type="button"></button>
-        <div id="popup" class="popup">
-            <div class="popup__body">
-                <div class="popup__content">
-                    <span class="popup__close">X</span>
-                    <h2 class="popup__title">Спасибо</h2>
-                    Мы свяжемся с вами в ближайшее время
+        <div class="modal fade" id="ThankYouModal" tabindex="-1" aria-labelledby="ThankYouModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ThankYouModalLabel">Спасибо</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Мы свяжемся с вами в ближайшее время</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <script src="js/jquery-3.6.0.js"></script>
+    <script src="./bootstrap/bootstrap.min.js"></script>
+    <script src="js/jquery.lazy.min.js"></script>
     <script src="slick/slick.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/popups.js"></script>
 
 </body>
 

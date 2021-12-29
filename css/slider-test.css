@@ -1581,6 +1581,7 @@ main {
   color: #222;
   -webkit-backdrop-filter: none;
           backdrop-filter: none;
+  background-color: #fff;
 }
 
 .header__logo {
@@ -1593,7 +1594,7 @@ main {
 
 .header__menu {
   border-top: 1px solid #eeeeee4d;
-  border-bottom: 1px solid #eeeeee4d;
+  border-bottom: 1px solid #ff0000;
 }
 
 .header__menu.fixed {
